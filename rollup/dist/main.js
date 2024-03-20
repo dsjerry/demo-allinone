@@ -1,0 +1,1 @@
+!function(s){"use strict";var c;console.log((c="src/main.ts",s.join(process.cwd(),c)))}(path);

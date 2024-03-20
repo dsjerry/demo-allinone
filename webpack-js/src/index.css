@@ -1,0 +1,14 @@
+#root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.input {
+    width: 50%;
+}
+
+.list{
+    list-style: none;
+}

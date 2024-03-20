@@ -1,0 +1,43 @@
+{
+    "goods": [{
+        "id": 1,
+        "name": "商品1",
+        "price": 100,
+        "img": "http://img1.imgtn.bdimg.com/it/u=2350525959,2017097889&fm=26&gp=0.jpg"
+    }, {
+        "id": 2,
+        "name": "商品2",
+        "price": 200,
+        "img": "http://img1.imgtn.bdimg.com/it/u=2350525959,2017097889&fm=26&gp=0.jpg"
+    }, {
+        "id": 3,
+        "name": "商品3",
+        "price": 300,
+        "img": "http://img1.imgtn.bdimg.com/it/u=2350525959,2017097889&fm=26&gp=0.jpg"
+    }, {
+        "id": 4,
+        "name": "商品4",
+        "price": 400,
+        "img": "http://img1.imgtn.bdimg.com/it/u=2350525959,2017097889&fm=26&gp=0.jpg"
+    }, {
+        "id": 5,
+        "name": "商品5",
+        "price": 500,
+        "img": "http://img1.imgtn.bdimg.com/it/u=2350525959,2017097889&fm=26&gp=0.jpg"
+    }, {
+        "id": 6,
+        "name": "商品6",
+        "price": 600,
+        "img": "http://img1.imgtn.bdimg.com/it/u=2350525959,2017097889&fm=26&gp=0.jpg"
+    }, {
+        "id": 7,
+        "name": "商品7",
+        "price": 700,
+        "img": "http://img1.imgtn.bdimg.com/it/u=2350525959,2017097889&fm=26&gp=0.jpg"
+    }, {
+        "id": 8,
+        "name": "商品8",
+        "price": 800,
+        "img": "http://img1.imgtn.bdimg.com/it/u=2350525959,2017097889&fm=26&gp=0.jpg"
+    }]
+}

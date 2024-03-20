@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn">节流</button>
+    <br>
+    <input id="input" type="text" placeholder="防抖">
+</body>
+<script>
+    const btn = document.getElementById('btn');
+    let flag = true
+    btn.addEventListener('click', () => {
+        if (flag) {
+            console.log('节流')
+            flag = false
+            setTimeout(() => flag = true, 1000)
+        }
+    })
+
+    const input = document.getElementById('input');
+    let timer = null
+    input.addEventListener('input', () => {
+        if (timer) {
+            clearTimeout(timer)
+        }
+        timer = setTimeout(() => {
+            console.log(input.value)
+        }, 1000)
+    })
+</script>
+
+</html>

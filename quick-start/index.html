@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        header {
+            flex: 0 0 auto;
+            border-bottom: 1px solid rgba(209, 209, 209, 0.411);
+        }
+        main {
+            flex: 1 1 auto;
+            width: inherit;
+        }
+        table {
+            width: inherit;
+            padding: 0;
+            border: 1px solid rgba(209, 209, 209, 0.411);
+        }
+        th {
+            padding: 0.5em;
+            font-weight: normal;
+            background-color: #f2f2f2;
+            border-bottom: 1px solid rgba(209, 209, 209, 0.411);
+        }
+        td {
+            text-align: center;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+        }
+        label {
+            margin-right: 1em;
+        }
+        .normal-btn {
+            border: none;
+            outline: none;
+            background-color: transparent;
+            color: rgb(62, 135, 202);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h3 class="header-title">票种信息</h3>
+    </header>
+    <!-- 两个nav，分别是免费票和付费票 -->
+    <nav class="header-nav">
+      <button class="header-nav__btn normal-btn">添加免费票</button>
+      <button class="header-nav__btn normal-btn">添加付费票</button>
+    </nav>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>票种名称</th>
+                    <th>价格</th>
+                    <th>数量❓</th>
+                    <th>审核设置</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>我是用户</td>
+                    <td>免费</td>
+                    <td><input type="text" placeholder="请输入票种数量"></td>
+                    <td><select name="" id=""><option value="无需审核">无需审核</option></select></td>
+                    <td><button class="normal-btn form-setting">设置报名表单</button><button class="normal-btn">删除</button></td>
+                </tr>
+                <tr>
+                    <td>我是用户</td>
+                    <td><input type="text" placeholder="请输入票价"></td>
+                    <td><input type="text" placeholder="请输入票种数量"></td>
+                    <td><select name="" id=""><option value="无需审核">需要审核</option></select></td>
+                    <td><button class="normal-btn form-setting">设置报名表单</button><button class="normal-btn">删除</button></td>
+                </tr>
+                <tr class="setting-pane" style="display: none;">
+                   <td>
+                    <div style="text-align: left;">设置报名表单</div>
+                    <ul>
+                        <li><input type="checkbox"> <label for="">必填</label><label for="">姓名</label><input type="text" placeholder="提示信息"> <button class="normal-btn">删除</button></li>
+                        <li><input type="checkbox"> <label for="">必填</label><label for="">手机</label><input type="text" placeholder="提示信息"> <button class="normal-btn">删除</button></li>
+                        <li><input type="checkbox"> <label for="">必填</label><label for="">年龄</label><input type="text" placeholder="提示信息"> <button class="normal-btn">删除</button></li>
+                    </ul>
+                   </td>
+                   <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+</body>
+<script>
+    document.querySelector('.form-setting').addEventListener('click', function() {
+        document.querySelector('.setting-pane').style.display = 'table-row';
+    })
+</script>
+</html>
