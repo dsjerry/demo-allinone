@@ -1,24 +1,30 @@
-// @ts-check
+const obj1 = {
+    name: "张三",
+    school: {
+        name: "清华大学",
+        address: "北京",
+        getSchoolName() {
+            return this.name
+        },
+    },
+}
 
-const set = new Set()
-const map = new Map([
-    ["name", "jerry"],
-    ["gender", "male"],
-])
+const obj2 = shallowClone(obj1)
 
-map.set("age", "18")
+console.log(obj1 === obj2)
 
-console.log(map)
-console.log(map.get("name"))
-console.log(map.has("name"))
+obj2.school = {
+    name: "北京大学",
+}
 
-set.add({ name: "jerry" })
-set.add(1)
+console.log(obj1)
 
-console.log(set.has({ name: "jerry" }))
-console.log(set.has(1))
-
-const setAge = { age: 18 }
-set.add(setAge)
-
-console.log(set.has(setAge))
+function shallowClone(obj) {
+    const newObj = {}
+    for (let prop in obj) {
+        if (obj.hasOwnProperty(prop)) {
+            newObj[prop] = obj[prop]
+        }
+    }
+    return newObj
+}

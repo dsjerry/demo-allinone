@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="./src//jquery-3.7.1.js"></script>
-</head>
-<body>
-    <button id="btn">按钮</button>
-</body>
-<script>
-$('#btn').on('click', ()=>{
-    const res = $.ajax({
-        url: 'http://192.168.3.36:3000/users',
-        crossDomain: true,
-        success: (data)=>{
-            console.log(data)
-        }
-    })
-})
-</script>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="app">
+            <ul>
+                <li>2</li>
+                <li>2</li>
+                <li>2</li>
+                <li>2</li>
+                <li>2</li>
+            </ul>
+        </div>
+    </body>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./index.js"></script>
 </html>
