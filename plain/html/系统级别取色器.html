@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>系统级别取色器</title>
+    </head>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 2px dotted cyan;
+        }
+    </style>
+    <body>
+        <h3>系统级别取色器</h3>
+        <div class="box"></div>
+        <button>点击取色</button>
+    </body>
+    <script>
+        const box = document.querySelector(".box")
+        const title = document.querySelector("h3")
+        const btn = document.querySelector("button")
+
+        btn.addEventListener("click", async () => {
+            const dropper = new EyeDropper()
+            try {
+                const result = await dropper.open()
+                box.style.backgroundColor = title.textContent = result.sRGBHex
+            } catch (error) {
+                console.log(error)
+            }
+        })
+    </script>
+</html>

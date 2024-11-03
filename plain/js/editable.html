@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .shape {
+                height: 0;
+                width: 0;
+                border-bottom: 30px solid black;
+                border-left: 20px solid transparent;
+                border-right: 20px solid transparent;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="shape" contenteditable="true"></div>
+    </body>
+    <script>
+        const div = document.querySelector("div")
+        div.oninput = function () {
+            console.log(div.innerText)
+        }
+        div.onfocus = function () {
+            console.log("focus")
+        }
+        div.onblur = function (e) {
+            console.log(e)
+        }
+    </script>
+</html>

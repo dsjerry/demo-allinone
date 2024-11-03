@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>保存图片视频到相册</title>
+    </head>
+    <body>
+        <input type="file" name="file" />
+        <button>保存</button>
+        <img src="./flight.png" alt="" />
+    </body>
+    <script>
+        const input = document.querySelector("input")
+        const btn = document.querySelector("button")
+
+        btn.addEventListener("click", async () => {
+            const files = input.files
+
+            if (files.length === 0) {
+                alert("请选择文件")
+                return
+            }
+            const file = files[0]
+            const result = await navigator.share({
+                files: [file],
+            })
+
+            console.log(result)
+        })
+    </script>
+</html>

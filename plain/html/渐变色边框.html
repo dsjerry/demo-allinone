@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <style>
+        :root {
+            --outside-size: 300px;
+            --outside-border-radius: 10%;
+            --outside-border-radius-right: 2%;
+            --content-size: 290px;
+            --content-border-radius: 10%;
+            --content-border-radius-right: 2%;
+        }
+        .container {
+            width: var(--outside-size);
+            height: var(--outside-size);
+            border-radius: var(--outside-border-radius)
+                var(--outside-border-radius-right);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            margin: 50px auto;
+            overflow: hidden;
+        }
+        .content {
+            border-radius: var(--content-border-radius)
+                var(--content-border-radius-right);
+            width: var(--content-size);
+            height: var(--content-size);
+            font-size: 16px;
+            font-weight: 600;
+            line-height: normal;
+            text-align: center;
+            letter-spacing: 0;
+            color: #333;
+            background: lightcyan;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .container::before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            left: -50%;
+            top: -56%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                90deg,
+                rgba(255, 255, 255, 0.21) 0%,
+                #78dfff 30.19%,
+                rgba(255, 255, 255, 0.2) 52.24%,
+                #78dfff 80.63%,
+                rgba(255, 255, 255, 0.22) 100%
+            );
+
+            animation: rotate-full 2s linear infinite;
+        }
+    </style>
+    <body>
+        <div class="container">
+            <div class="content">内容</div>
+        </div>
+    </body>
+</html>
