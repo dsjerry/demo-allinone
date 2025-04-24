@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    div {
+      width: 50px;
+      height: 50px;
+      margin: 5px;
+      background-color: white;
+      border: 1px solid gainsboro;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-4.0.0-beta.2.min.js"></script>
+  <body>
+    <div></div>
+  </body>
+  <script>
+    async function sleep(time) {
+      return new Promise(resolve => {
+        setTimeout(() => {
+          resolve()
+        }, time)
+      })
+    }
+
+    async function test() {
+      let i = 0
+      while (true) {
+        $("div").css("background-color", i % 2 ? "red" : "green")
+        await sleep(200)
+        localStorage.setItem("key" + i, "value" + i)
+        i++
+      }
+    }
+
+    // test()
+  </script>
+</html>

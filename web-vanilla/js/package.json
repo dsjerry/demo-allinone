@@ -1,0 +1,7 @@
+{
+  "type": "module",
+  "dependencies": {
+    "dayjs": "^1.11.11",
+    "lodash-es": "^4.17.21"
+  }
+}
