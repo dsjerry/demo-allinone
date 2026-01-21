@@ -8,7 +8,7 @@
 npm install
 ```
 
-如果 electron 下在速度慢，可配置在当前目录的`.npmrc`文件中配置大陆 CND：
+如果 electron 下在速度慢，可配置在当前目录的`.npmrc`文件中配置 CND：
 
 ```
 ELECTRON_MIRROR="https://npmmirror.com/mirrors/electron/"
