@@ -2,6 +2,7 @@ import express from 'express';
 import multer from 'multer';
 import fetch from 'node-fetch';
 import { Client } from 'minio';
+import { createHmac } from 'crypto';
 
 import 'dotenv/config';
 
@@ -9,6 +10,15 @@ const app = express();
 const upload = multer();
 app.use(express.json());
 
+// 允许跨域
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', req.headers.origin || '*');
+  res.header('Access-Control-Allow-Credentials', 'true');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE, OPTIONS');
+  if (req.method === 'OPTIONS') return res.sendStatus(204);
+  next();
+});
 
 const minio = new Client({
   endPoint: process.env.MINIO_ENDPOINT || '127.0.0.1',
@@ -19,10 +29,53 @@ const minio = new Client({
 });
 
 const BUCKET = process.env.MINIO_BUCKET || 'onlyoffice';
+const DEV_KEY = process.env.JWT_SECRET || 'cAOY2M0AzaLXlhUrtkfRHVP84znDk4gv';
+// JWT_EXPIRES（秒）。未设置或 <=0 时，不自动添加 exp/iat，保持与前端示例一致。
+const JWT_EXPIRES = Number(process.env.JWT_EXPIRES || 0);
+
+const base64Url = (buf: Buffer) =>
+  buf
+    .toString('base64')
+    .replace(/\+/g, '-')
+    .replace(/\//g, '_')
+    .replace(/=+$/g, '');
+
+function createJWT(payload: Record<string, any>, secret: string = DEV_KEY) {
+  if (!secret) throw new Error('missing secret');
+  const now = Math.floor(Date.now() / 1000);
+  const payloadWithExp: Record<string, any> = { ...payload };
+
+  // 只有配置了 JWT_EXPIRES 时才自动补 iat/exp，且不会覆盖调用方已提供的值。
+  if (JWT_EXPIRES > 0) {
+    if (payloadWithExp.iat === undefined) payloadWithExp.iat = now;
+    if (payloadWithExp.exp === undefined) payloadWithExp.exp = now + JWT_EXPIRES;
+  }
+
+  const header = { typ: 'JWT', alg: 'HS256' };
+  const encodedHeader = base64Url(Buffer.from(JSON.stringify(header)));
+  const encodedPayload = base64Url(Buffer.from(JSON.stringify(payloadWithExp)));
+  const data = `${encodedHeader}.${encodedPayload}`;
+  const signature = createHmac('sha256', secret).update(data).digest();
+  const encodedSignature = base64Url(signature);
+  return `${encodedHeader}.${encodedPayload}.${encodedSignature}`;
+}
+
+// 生成 JWT
+app.post('/doctoken', (req, res) => {
+  try {
+    const payload = req.body || {};
+    const token = createJWT(payload, DEV_KEY);
+    return res.json({ token });
+  } catch (err) {
+    console.error(err);
+    return res.status(500).send(String(err));
+  }
+});
 
 // OnlyOffice 回调
 app.post('/onlyoffice/callback', upload.any(), async (req, res) => {
   try {
+    console.log(req.body);
     const { status, url, filetype } = req.body || {};
     if (status === 2 || status === 6) {
       let buf: Buffer;
@@ -41,7 +94,7 @@ app.post('/onlyoffice/callback', upload.any(), async (req, res) => {
       await minio.putObject(BUCKET, objectName, buf);
       console.log('saved to minio:', objectName, 'size:', buf.length);
     }
-    return res.sendStatus(200);
+    return res.status(200).json({ error: 0 });
   } catch (err) {
     console.error(err);
     return res.status(500).send(String(err));
