@@ -29,7 +29,7 @@ const minio = new Client({
 });
 
 const BUCKET = process.env.MINIO_BUCKET || 'onlyoffice';
-const DEV_KEY = process.env.JWT_SECRET || 'AUFlJcgIvzW7KbRN5bcuHtu1y9tBCyUL';
+const DEV_KEY = process.env.JWT_SECRET || 'DpZCDUIlhnhq8QAhTgcWXro7z3VQCq2G';
 // JWT_EXPIRES（秒）。未设置或 <=0 时，不自动添加 exp/iat，保持与前端示例一致。
 const JWT_EXPIRES = Number(process.env.JWT_EXPIRES || 0);
 
