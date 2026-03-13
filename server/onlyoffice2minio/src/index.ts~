@@ -20,16 +20,24 @@ app.use((req, res, next) => {
   next();
 });
 
+const MINIO_ENDPOINT = process.env.MINIO_ENDPOINT || '127.0.0.1';
+const MINIO_PORT = Number(process.env.MINIO_PORT || 9000);
+const MINIO_USE_SSL = process.env.MINIO_USE_SSL === 'true';
 const minio = new Client({
-  endPoint: process.env.MINIO_ENDPOINT || '127.0.0.1',
-  port: Number(process.env.MINIO_PORT || 9000),
-  useSSL: process.env.MINIO_USE_SSL === 'true',
+  endPoint: MINIO_ENDPOINT,
+  port: MINIO_PORT,
+  useSSL: MINIO_USE_SSL,
   accessKey: process.env.MINIO_KEY || 'minioadmin',
   secretKey: process.env.MINIO_SECRET || 'minioadmin'
 });
 
 const BUCKET = process.env.MINIO_BUCKET || 'onlyoffice';
-const DEV_KEY = process.env.JWT_SECRET || 'DpZCDUIlhnhq8QAhTgcWXro7z3VQCq2G';
+const DEFAULT_TEMPLATE_BUCKET = process.env.DEFAULT_TEMPLATE_BUCKET || BUCKET;
+const DEFAULT_TEMPLATE_KEY = process.env.DEFAULT_TEMPLATE_KEY || '1773022699020_empty.docx';
+const DEFAULT_TEMPLATE_EXPIRES = Number(process.env.DEFAULT_TEMPLATE_EXPIRES || 3600); // 秒
+// 是否返回带签名的链接，默认 false（直接访问公开桶直链）
+const DEFAULT_TEMPLATE_SIGNED = process.env.DEFAULT_TEMPLATE_SIGNED === 'true';
+const DEV_KEY = process.env.JWT_SECRET || '6KXocKlGV3wUrgJSRIDGnBldsPoQQupG';
 // JWT_EXPIRES（秒）。未设置或 <=0 时，不自动添加 exp/iat，保持与前端示例一致。
 const JWT_EXPIRES = Number(process.env.JWT_EXPIRES || 0);
 
@@ -66,6 +74,50 @@ app.post('/doctoken', (req, res) => {
     const payload = req.body || {};
     const token = createJWT(payload, DEV_KEY);
     return res.json({ token });
+  } catch (err) {
+    console.error(err);
+    return res.status(500).send(String(err));
+  }
+});
+
+// 获取默认空文件（可选签名链接）
+app.get('/default-file', async (_req, res) => {
+  try {
+    const directUrl = `${MINIO_USE_SSL ? 'https' : 'http'}://${MINIO_ENDPOINT}:${MINIO_PORT}/${DEFAULT_TEMPLATE_BUCKET}/${encodeURIComponent(
+      DEFAULT_TEMPLATE_KEY
+    )}`;
+
+    const url = DEFAULT_TEMPLATE_SIGNED
+      ? await minio.presignedGetObject(
+          DEFAULT_TEMPLATE_BUCKET,
+          DEFAULT_TEMPLATE_KEY,
+          DEFAULT_TEMPLATE_EXPIRES
+        )
+      : directUrl;
+
+    return res.status(200).json({ error: 0, url, key: DEFAULT_TEMPLATE_KEY });
+  } catch (err) {
+    console.error(err);
+    return res.status(500).send(String(err));
+  }
+});
+
+// 上传文件到 MinIO
+app.post('/upload', upload.single('file'), async (req, res) => {
+  try {
+    if (!req.file) return res.status(400).json({ error: '缺少文件字段 file' });
+
+    const { originalname, buffer, mimetype } = req.file;
+    const decodedName = originalname ? Buffer.from(originalname, 'latin1').toString('utf8') : 'upload';
+    const objectName = `${Date.now()}_${decodedName}`;
+
+    await minio.putObject(BUCKET, objectName, buffer, buffer.length, {
+      'Content-Type': mimetype || 'application/octet-stream'
+    });
+
+    const fileUrl = `${MINIO_USE_SSL ? 'https' : 'http'}://${MINIO_ENDPOINT}:${MINIO_PORT}/${BUCKET}/${encodeURIComponent(objectName)}`;
+
+    return res.status(200).json({ error: 0, objectName, url: fileUrl });
   } catch (err) {
     console.error(err);
     return res.status(500).send(String(err));
