@@ -37,7 +37,7 @@ const DEFAULT_TEMPLATE_KEY = process.env.DEFAULT_TEMPLATE_KEY || '1773022699020_
 const DEFAULT_TEMPLATE_EXPIRES = Number(process.env.DEFAULT_TEMPLATE_EXPIRES || 3600); // 秒
 // 是否返回带签名的链接，默认 false（直接访问公开桶直链）
 const DEFAULT_TEMPLATE_SIGNED = process.env.DEFAULT_TEMPLATE_SIGNED === 'true';
-const DEV_KEY = process.env.JWT_SECRET || 'qlT95BWMyotOp0lMI6Pke6lMDdCKc4ZO';
+const DEV_KEY = process.env.JWT_SECRET || '6KXocKlGV3wUrgJSRIDGnBldsPoQQupG';
 // JWT_EXPIRES（秒）。未设置或 <=0 时，不自动添加 exp/iat，保持与前端示例一致。
 const JWT_EXPIRES = Number(process.env.JWT_EXPIRES || 0);
 
