@@ -1,0 +1,20 @@
+{
+  "name": "framework-compare",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@koa/router": "^14.0.0",
+    "@types/express": "^5.0.3",
+    "@types/koa": "^3.0.0",
+    "@types/koa__router": "^12.0.4",
+    "express": "^5.1.0",
+    "koa": "^3.0.1"
+  }
+}

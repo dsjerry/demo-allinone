@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket 连接测试工具</title>
+    <style>        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f6f9; padding: 20px; max-width: 800px; margin: 0 auto; }
+        .container { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h2 { margin-top: 0; color: #333; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; color: #555; }
+        input[type="text"], textarea { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; font-size: 14px; }
+        textarea { height: 80px; resize: vertical; }
+        .btn-group { display: flex; gap: 10px; margin-bottom: 20px; }
+        button { padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; font-size: 14px; font-weight: bold; transition: background 0.2s; }
+        button:disabled { opacity: 0.5; cursor: not-allowed; }
+        .btn-connect { background-color: #28a745; color: white; }
+        .btn-connect:hover { background-color: #218838; }
+        .btn-disconnect { background-color: #dc3545; color: white; }
+        .btn-disconnect:hover { background-color: #c82333; }
+        .btn-send { background-color: #007bff; color: white; }
+        .btn-send:hover { background-color: #0069d9; }
+        #logArea { background-color: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 4px; height: 400px; overflow-y: auto; font-family: 'Consolas', 'Courier New', monospace; font-size: 12px; white-space: pre-wrap; word-break: break-all; }
+        .log-info { color: #4ec9b0; }
+        .log-error { color: #f48771; }
+        .log-msg { color: #ce9178; }
+        .status-dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 5px; }
+        .status-disconnected { background-color: #dc3545; }
+        .status-connected { background-color: #28a745; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>WebSocket 调试工具 <span id="statusIndicator" class="status-dot status-disconnected"></span><span id="statusText">未连接</span></h2>
+
+    <div class="form-group">
+        <label for="wsUrl">WebSocket 地址 (URL):</label>
+        <input type="text" id="wsUrl" value="ws://192.168.0.47:7072/ws/dcb?deviceId=1901092544004281&Authorization=3490834ef1ebc113c7024213d7da677e211c949819586a977ebb631c8d14e5823c4ceb3f3e58adaa838e6be94932be5e96692712740d2cd569cca4f03bacce3ce9ab18915b91c5cac1578369f9f1f394654ac2ea1d71e2a62c36f3453accbd2430c3581c987140a08b97aaadda14dfc87303a8f8f4ec480603b17dc9d2363e739ea434c13aa51e9501d64339010764b7ec2d946eb62d40efb6ba38360cb07846b6cc379fed61e50539a80d2ee1c15f6b25472492501c39f947f42346963f1b36e35279398e3c5e7b437cd44347f33c0f3dd1b667766f5b3b14e4ab9affb580210d6fce7259d3d397b769b7fd54f49d650ee6dbcb0eab0ba2070c0f76ff760089&sign=04cdb86d4b55fc2884aca9f6531903dfbc0153a6cc0f8ed41391f3fc4179e1e2b99b55388fe4c28341f049d6930743eb484e122a24a4f08c21e1f5533b77c4d6">
+        <small style="color: #666;">提示：如果是 HTTPS 页面访问，请将 ws:// 改为 wss://</small>
+    </div>
+
+    <div class="btn-group">
+        <button id="btnConnect" class="btn-connect" onclick="connect()">连接</button>
+        <button id="btnDisconnect" class="btn-disconnect" onclick="disconnect()" disabled>断开</button>
+    </div>
+
+    <div class="form-group">
+        <label for="messageInput">发送消息 (JSON):</label>
+        <textarea id="messageInput" placeholder='{"type": "HAZARD_RECOGNITION", "data": "test"}'></textarea>
+    </div>
+
+    <div class="btn-group">
+        <button id="btnSend" class="btn-send" onclick="sendMessage()" disabled>发送消息</button>
+        <button onclick="clearLog()">清空日志</button>
+    </div>
+
+    <div class="form-group">
+        <label>日志输出:</label>
+        <div id="logArea"></div>
+    </div>
+</div>
+
+<script>    let ws = null;
+
+    function log(message, type = 'info') {
+        const logArea = document.getElementById('logArea');
+        const timestamp = new Date().toLocaleTimeString();
+        let className = 'log-info';
+        if (type === 'error') className = 'log-error';
+        if (type === 'msg') className = 'log-msg';
+        
+        logArea.innerHTML += `<div class="${className}">[${timestamp}] ${message}</div>`;
+        logArea.scrollTop = logArea.scrollHeight;
+    }
+
+    function updateStatus(connected) {
+        const dot = document.getElementById('statusIndicator');
+        const text = document.getElementById('statusText');
+        const btnConnect = document.getElementById('btnConnect');
+        const btnDisconnect = document.getElementById('btnDisconnect');
+        const btnSend = document.getElementById('btnSend');
+
+        if (connected) {
+            dot.className = 'status-dot status-connected';
+            text.innerText = '已连接';
+            btnConnect.disabled = true;
+            btnDisconnect.disabled = false;
+            btnSend.disabled = false;
+        } else {
+            dot.className = 'status-dot status-disconnected';
+            text.innerText = '未连接';
+            btnConnect.disabled = false;
+            btnDisconnect.disabled = true;
+            btnSend.disabled = true;
+        }
+    }
+
+    function connect() {
+        const url = document.getElementById('wsUrl').value;
+        if (!url) {
+            log('URL 不能为空', 'error');
+            return;
+        }
+
+        try {
+            log(`正在连接: ${url}...`);
+            ws = new WebSocket(url);
+
+            ws.onopen = () => {
+                log('WebSocket 连接成功!', 'info');
+                updateStatus(true);
+            };
+
+            ws.onmessage = (event) => {
+                log(`收到消息: ${event.data}`, 'msg');
+                // 尝试格式化 JSON
+                try {
+                    const json = JSON.parse(event.data);
+                    log(`JSON 预览: ${JSON.stringify(json, null, 2)}`, 'msg');
+                } catch (e) {
+                    // 不是 JSON 则忽略
+                }
+            };
+
+            ws.onclose = (event) => {
+                log(`WebSocket 已断开 (Code: ${event.code}, Reason: ${event.reason})`, 'error');
+                updateStatus(false);
+                ws = null;
+            };
+
+            ws.onerror = (error) => {
+                log('WebSocket 发生错误，请检查控制台或网络', 'error');
+                console.error(error);
+            };
+
+        } catch (e) {
+            log(`创建连接失败: ${e.message}`, 'error');
+        }
+    }
+
+    function disconnect() {
+        if (ws) {
+            log('主动断开连接...');
+            ws.close();
+        }
+    }
+
+    function sendMessage() {
+        if (ws && ws.readyState === WebSocket.OPEN) {
+            const msg = document.getElementById('messageInput').value;
+            if (!msg) {
+                log('消息内容不能为空', 'error');
+                return;
+            }
+            log(`发送消息: ${msg}`, 'info');
+            ws.send(msg);
+        } else {
+            log('连接未建立，无法发送消息', 'error');
+        }
+    }
+
+    function clearLog() {
+        document.getElementById('logArea').innerHTML = '';
+    }
+</script>
+
+</body>
+</html>

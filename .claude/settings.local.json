@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm list *)",
+      "Bash(npm install *)",
+      "Bash(mmdc -i mermaid.mmd -o mermaid.png -b white)",
+      "Bash(mmdc --help)",
+      "Bash(mmdc -i mermaid.mmd -o mermaid.png -b transparent)"
+    ]
+  }
+}

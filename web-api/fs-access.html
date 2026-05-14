@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      background-color: #575555;
+    }
+
+    main {
+      display: flex;
+      gap: 1rem;
+    }
+    section {
+      flex: 3;
+    }
+    aside {
+      flex: 2;
+    }
+  </style>
+  <body>
+    <main>
+      <section>
+        <fieldset>
+          <legend>File System Access API</legend>
+          <div>
+            <button id="openFile">Open File</button>
+            <button id="openDirectory">Open Directory</button>
+          </div>
+          <div id="output">
+            <input type="text" id="input" />
+            <button id="saveFile">Save File</button>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>With IndexedDB</legend>
+          <div>
+            <button id="indexeddb-open">Open</button>
+            <button id="indexeddb-save">Save</button>
+            <button id="indexeddb-restore">Restore</button>
+          </div>
+        </fieldset>
+      </section>
+      <aside>
+        <fieldset>
+          <legend>Info</legend>
+          <div id="info"></div>
+        </fieldset>
+      </aside>
+    </main>
+    <script>
+      let currentHandle;
+      const logToInfo = (...messages) => {
+        document.getElementById("info").textContent = messages.join(" ");
+      };
+
+      async function openFile() {
+        const [fileHandle] = await window.showOpenFilePicker();
+        console.log(fileHandle);
+        const file = await fileHandle.getFile();
+        console.log(file);
+        const text = await file.text();
+        console.log(text);
+        currentHandle = fileHandle;
+        logToInfo(file.name);
+      }
+
+      async function saveFile() {
+        const fileHandle = await window.showSaveFilePicker();
+        const file = await fileHandle.createWritable();
+
+        const input = document.getElementById("input").value;
+
+        await file.write(input);
+        await file.close();
+      }
+
+      async function openDirectory() {
+        const dirHandle = await window.showDirectoryPicker();
+        console.log(dirHandle);
+        logToInfo(dirHandle.name);
+      }
+
+      async function saveToIndexedDB() {
+        if (!currentHandle) return alert("请先打开文件");
+
+        const dbRequest = indexedDB.open("fsaccess", 2);
+
+        dbRequest.onupgradeneeded = function (event) {
+          const db = event.target.result;
+          if (!db.objectStoreNames.contains("files")) {
+            db.createObjectStore("files", { keyPath: "id", autoIncrement: true });
+          }
+        };
+
+        dbRequest.onsuccess = function (event) {
+          const db = event.target.result;
+          if (!db.objectStoreNames.contains("files")) {
+            db.close();
+            const deleteRequest = indexedDB.deleteDatabase("fsaccess");
+            deleteRequest.onsuccess = function () {
+              saveToIndexedDB();
+            };
+            return;
+          }
+          const transaction = db.transaction(["files"], "readwrite");
+          const objectStore = transaction.objectStore("files");
+          objectStore.add({ handle: currentHandle, data: document.getElementById("input").value });
+          logToInfo("已保存到 IndexedDB", currentHandle.name);
+        };
+        dbRequest.onerror = function (event) {
+          logToInfo("Database error: " + event.target.errorCode);
+          console.error("Database error: " + event.target.errorCode);
+        };
+      }
+
+      async function restoreFromIndexedDB() {
+        const dbRequest = indexedDB.open("fsaccess", 2);
+
+        dbRequest.onupgradeneeded = function (event) {
+          const db = event.target.result;
+          if (!db.objectStoreNames.contains("files")) {
+            db.createObjectStore("files", { keyPath: "id", autoIncrement: true });
+          }
+        };
+
+        dbRequest.onsuccess = function (event) {
+          const db = event.target.result;
+          if (!db.objectStoreNames.contains("files")) {
+            db.close();
+            const deleteRequest = indexedDB.deleteDatabase("fsaccess");
+            deleteRequest.onsuccess = function () {
+              restoreFromIndexedDB();
+            };
+            return;
+          }
+          const transaction = db.transaction(["files"], "readonly");
+          const objectStore = transaction.objectStore("files");
+          const request = objectStore.getAll();
+
+          request.onsuccess = function (event) {
+            const files = event.target.result;
+            console.log(files);
+            if (files.length > 0) {
+              currentHandle = files[0].handle;
+              document.getElementById("input").value = files[0].data;
+              logToInfo("从 IndexedDB 恢复文件: " + files[0].data);
+            }
+          };
+        };
+        dbRequest.onerror = function (event) {
+          logToInfo("Database error: " + event.target.errorCode);
+          console.error("Database error: " + event.target.errorCode);
+        };
+      }
+
+      document.getElementById("openFile").addEventListener("click", openFile);
+      document.getElementById("saveFile").addEventListener("click", saveFile);
+      document.getElementById("openDirectory").addEventListener("click", openDirectory);
+      document.getElementById("indexeddb-open").addEventListener("click", openFile);
+      document.getElementById("indexeddb-save").addEventListener("click", saveToIndexedDB);
+      document.getElementById("indexeddb-restore").addEventListener("click", restoreFromIndexedDB);
+    </script>
+  </body>
+</html>

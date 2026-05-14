@@ -1,0 +1,73 @@
+{
+  "version": "2.11",
+  "children": [
+    {
+      "type": "frame",
+      "id": "SAnUa",
+      "x": 0,
+      "y": 0,
+      "name": "WebSocket Icon",
+      "width": 64,
+      "height": 64,
+      "layout": "none",
+      "children": [
+        {
+          "type": "ellipse",
+          "id": "v7gyyc",
+          "x": 0,
+          "y": 0,
+          "name": "Background",
+          "fill": "#3B82F6",
+          "width": 64,
+          "height": 64
+        },
+        {
+          "type": "ellipse",
+          "id": "DzDKS",
+          "x": 10,
+          "y": 26,
+          "name": "Node 1",
+          "fill": "#FFFFFF",
+          "width": 12,
+          "height": 12
+        },
+        {
+          "type": "ellipse",
+          "id": "sXUlp",
+          "x": 42,
+          "y": 26,
+          "name": "Node 2",
+          "fill": "#FFFFFF",
+          "width": 12,
+          "height": 12
+        },
+        {
+          "type": "line",
+          "id": "q4cIDD",
+          "x": 22,
+          "y": 32,
+          "name": "Line 1",
+          "width": 20,
+          "height": 0,
+          "stroke": {
+            "thickness": 2,
+            "fill": "#FFFFFF"
+          }
+        },
+        {
+          "type": "line",
+          "id": "CtwX0",
+          "x": 22,
+          "y": 20,
+          "name": "Line 2",
+          "width": 20,
+          "height": 0,
+          "stroke": {
+            "thickness": 2,
+            "fill": "#FFFFFF"
+          }
+        }
+      ]
+    }
+  ]
+}
