@@ -3,71 +3,5575 @@
   "children": [
     {
       "type": "frame",
-      "id": "SAnUa",
+      "id": "y8XE0",
       "x": 0,
-      "y": 0,
-      "name": "WebSocket Icon",
-      "width": 64,
-      "height": 64,
-      "layout": "none",
+      "y": 2600,
+      "name": "Button/Primary",
+      "reusable": true,
+      "fill": "$accent-primary",
+      "cornerRadius": "$rounded-full",
+      "gap": 8,
+      "padding": [
+        24,
+        12
+      ],
+      "justifyContent": "center",
+      "alignItems": "center",
       "children": [
         {
-          "type": "ellipse",
-          "id": "v7gyyc",
-          "x": 0,
-          "y": 0,
-          "name": "Background",
-          "fill": "#3B82F6",
-          "width": 64,
-          "height": 64
+          "type": "text",
+          "id": "FkFcH",
+          "name": "btn-label",
+          "fill": "$surface-primary",
+          "content": "立即预订",
+          "fontFamily": "Inter",
+          "fontSize": 14,
+          "fontWeight": "700"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "JZrHe",
+      "x": 120,
+      "y": 2600,
+      "name": "Button/Secondary",
+      "reusable": true,
+      "fill": "$surface-primary",
+      "cornerRadius": "$rounded-full",
+      "stroke": {
+        "align": "center",
+        "thickness": 1.5,
+        "fill": "$border-subtle"
+      },
+      "gap": 8,
+      "padding": [
+        24,
+        12
+      ],
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "text",
+          "id": "fAMSQ",
+          "name": "btn-label",
+          "fill": "$foreground-primary",
+          "content": "了解更多",
+          "fontFamily": "Inter",
+          "fontSize": 14,
+          "fontWeight": "600"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "dM4H5",
+      "x": 0,
+      "y": 0,
+      "name": "Coffee Shop Landing Page",
+      "width": 1440,
+      "fill": "$surface-primary",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "y1YMe",
+          "name": "Navbar",
+          "width": "fill_container",
+          "padding": [
+            80,
+            20
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "WqKEc",
+              "name": "logoGrp",
+              "gap": 10,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "ZmBkD",
+                  "content": "☕",
+                  "fontFamily": "Inter",
+                  "fontSize": 24,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "puNnC",
+                  "fill": "$foreground-primary",
+                  "content": "Brew & Co.",
+                  "fontFamily": "Playfair Display",
+                  "fontSize": 20,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "bqeI7",
+              "name": "navLinksGrp",
+              "gap": 40,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Vdfrr",
+                  "fill": "$foreground-secondary",
+                  "content": "首页",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "DoYz7",
+                  "fill": "$foreground-secondary",
+                  "content": "菜单",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "IJB9W",
+                  "fill": "$foreground-secondary",
+                  "content": "关于我们",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "kmfEf",
+                  "fill": "$foreground-secondary",
+                  "content": "联系",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "id": "w1H6Cm",
+              "type": "ref",
+              "ref": "y8XE0",
+              "name": "navCTA",
+              "descendants": {
+                "FkFcH": {
+                  "content": "预约订座"
+                }
+              }
+            }
+          ]
         },
         {
-          "type": "ellipse",
-          "id": "DzDKS",
-          "x": 10,
-          "y": 26,
-          "name": "Node 1",
-          "fill": "#FFFFFF",
-          "width": 12,
-          "height": 12
+          "type": "frame",
+          "id": "GOcn6",
+          "width": "fill_container",
+          "height": 1,
+          "fill": "$border-subtle"
         },
         {
-          "type": "ellipse",
-          "id": "sXUlp",
-          "x": 42,
-          "y": 26,
-          "name": "Node 2",
-          "fill": "#FFFFFF",
-          "width": 12,
-          "height": 12
+          "type": "frame",
+          "id": "uF20m",
+          "name": "Hero",
+          "width": "fill_container",
+          "gap": 60,
+          "padding": [
+            100,
+            80
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "pOZUw",
+              "name": "Hero Content",
+              "width": 520,
+              "layout": "vertical",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "JERWm",
+                  "name": "heroTitle",
+                  "fill": "$foreground-primary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "每一杯咖啡，都是一段故事",
+                  "lineHeight": 1.2,
+                  "fontFamily": "Playfair Display",
+                  "fontSize": 56,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "SOurW",
+                  "name": "heroDesc",
+                  "fill": "$foreground-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "在 Brew & Co.，我们精选全球优质咖啡豆，由资深烘焙师手工烘焙，为您带来独一无二的风味体验。",
+                  "lineHeight": 1.6,
+                  "fontFamily": "Inter",
+                  "fontSize": 16
+                },
+                {
+                  "type": "frame",
+                  "id": "Iv3Y2",
+                  "name": "heroBtns",
+                  "gap": 16,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "id": "pty3X",
+                      "type": "ref",
+                      "ref": "y8XE0",
+                      "name": "heroCTA1",
+                      "descendants": {
+                        "FkFcH": {
+                          "content": "探索菜单"
+                        }
+                      }
+                    },
+                    {
+                      "id": "GSaZJ",
+                      "type": "ref",
+                      "ref": "JZrHe",
+                      "name": "heroCTA2",
+                      "descendants": {
+                        "fAMSQ": {
+                          "content": "关于我们"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "ILWzN",
+                  "fill": "$foreground-muted",
+                  "content": "⭐ 4.9 · 1000+ 好评 · 始于 2018",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "UEEPS",
+              "name": "Coffee Cup Visual",
+              "width": 400,
+              "height": 420,
+              "layout": "none",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "B7djE",
+                  "x": 100,
+                  "y": 60,
+                  "name": "Cup Body",
+                  "width": 200,
+                  "height": 260,
+                  "fill": "$accent-primary",
+                  "cornerRadius": [
+                    16,
+                    16,
+                    20,
+                    20
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "o5aA25",
+                  "x": 80,
+                  "y": 40,
+                  "name": "Cup Rim",
+                  "width": 240,
+                  "height": 24,
+                  "fill": "$accent-secondary",
+                  "cornerRadius": 12
+                },
+                {
+                  "type": "ellipse",
+                  "id": "uTHtS",
+                  "x": 280,
+                  "y": 120,
+                  "name": "Handle",
+                  "innerRadius": 0.6,
+                  "fill": "$surface-primary",
+                  "width": 40,
+                  "height": 80,
+                  "stroke": {
+                    "thickness": 6,
+                    "fill": "$accent-primary"
+                  }
+                },
+                {
+                  "type": "ellipse",
+                  "id": "BkMmZ",
+                  "x": 30,
+                  "y": 300,
+                  "name": "Saucer",
+                  "fill": "$surface-secondary",
+                  "width": 340,
+                  "height": 40,
+                  "stroke": {
+                    "thickness": 2,
+                    "fill": "$border-subtle"
+                  }
+                },
+                {
+                  "type": "path",
+                  "id": "TuFcU",
+                  "x": 160,
+                  "y": 0,
+                  "name": "Steam 1",
+                  "geometry": "M15 50q-10-15 0-35 10-15 0-25",
+                  "width": 30,
+                  "height": 50,
+                  "stroke": {
+                    "align": "center",
+                    "thickness": 3,
+                    "fill": "$accent-primary"
+                  }
+                },
+                {
+                  "type": "path",
+                  "id": "x4m4DY",
+                  "x": 210,
+                  "y": 5,
+                  "name": "Steam 2",
+                  "geometry": "M12 45q-7-20 0-35 8-10 0-18",
+                  "width": 25,
+                  "height": 45,
+                  "stroke": {
+                    "align": "center",
+                    "thickness": 2.5,
+                    "fill": "$accent-primary"
+                  }
+                },
+                {
+                  "type": "path",
+                  "id": "PQKVT",
+                  "x": 185,
+                  "y": 2,
+                  "name": "Steam 3",
+                  "geometry": "M14 48q-8-20 0-38 8-10 0-20",
+                  "width": 28,
+                  "height": 48,
+                  "stroke": {
+                    "align": "center",
+                    "thickness": 2,
+                    "fill": "$accent-primary"
+                  }
+                },
+                {
+                  "type": "ellipse",
+                  "id": "v5S8qb",
+                  "x": 50,
+                  "y": 355,
+                  "name": "Bean 1",
+                  "rotation": 29.999999999999996,
+                  "fill": "$accent-secondary",
+                  "width": 14,
+                  "height": 20
+                },
+                {
+                  "type": "ellipse",
+                  "id": "M4dBH9",
+                  "x": 320,
+                  "y": 360,
+                  "name": "Bean 2",
+                  "rotation": -20,
+                  "fill": "$accent-secondary",
+                  "width": 14,
+                  "height": 20
+                },
+                {
+                  "type": "ellipse",
+                  "id": "d2jhaq",
+                  "x": 340,
+                  "y": 345,
+                  "name": "Bean 3",
+                  "rotation": 10,
+                  "fill": "$accent-secondary",
+                  "width": 12,
+                  "height": 16
+                }
+              ]
+            }
+          ]
         },
         {
-          "type": "line",
-          "id": "q4cIDD",
-          "x": 22,
-          "y": 32,
-          "name": "Line 1",
-          "width": 20,
-          "height": 0,
-          "stroke": {
-            "thickness": 2,
-            "fill": "#FFFFFF"
-          }
+          "type": "frame",
+          "id": "QH5YB",
+          "name": "Menu Section",
+          "width": "fill_container",
+          "fill": "$surface-secondary",
+          "layout": "vertical",
+          "gap": 48,
+          "padding": 80,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "SQGYL",
+              "name": "menuHeader",
+              "width": 600,
+              "layout": "vertical",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "b172f",
+                  "name": "Section Label",
+                  "fill": "$accent-primary",
+                  "content": "精选推荐",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "OOZ8G",
+                  "fill": "$foreground-primary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "我们的招牌饮品",
+                  "fontFamily": "Playfair Display",
+                  "fontSize": 40,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "AXpKv",
+                  "fill": "$foreground-muted",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "每一款都由我们的咖啡师精心调配，选用当季最新鲜的咖啡豆",
+                  "fontFamily": "Inter",
+                  "fontSize": 16
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "WIkQv",
+              "name": "Menu Cards",
+              "width": "fill_container",
+              "gap": 32,
+              "justifyContent": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "l3VPtZ",
+                  "name": "Card 1",
+                  "width": 340,
+                  "fill": "$surface-primary",
+                  "cornerRadius": "$rounded-xl",
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "qmJju",
+                      "name": "Card Image",
+                      "width": "fill_container",
+                      "height": 200,
+                      "fill": "$accent-secondary",
+                      "cornerRadius": [
+                        12,
+                        12,
+                        0,
+                        0
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "ACO92",
+                          "content": "☕",
+                          "fontFamily": "Inter",
+                          "fontSize": 64,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "c0CeC5",
+                      "name": "card1Content",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": [
+                        24,
+                        24,
+                        32,
+                        24
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "e5ekjX",
+                          "fill": "$foreground-primary",
+                          "content": "经典拿铁",
+                          "fontFamily": "Playfair Display",
+                          "fontSize": 20,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "ykw2n",
+                          "fill": "$foreground-muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "丝滑牛奶与浓缩咖啡的完美融合，表面覆盖细腻奶泡",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Inter",
+                          "fontSize": 14
+                        },
+                        {
+                          "type": "frame",
+                          "id": "UNmA0",
+                          "name": "card1Footer",
+                          "width": "fill_container",
+                          "padding": [
+                            12,
+                            0,
+                            0,
+                            0
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "ODwII",
+                              "fill": "$accent-primary",
+                              "content": "¥32",
+                              "fontFamily": "Inter",
+                              "fontSize": 20,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "SGitQ",
+                              "name": "card1Btn",
+                              "fill": "$accent-primary",
+                              "cornerRadius": "$rounded-full",
+                              "padding": [
+                                14,
+                                8
+                              ],
+                              "justifyContent": "center",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "OYBHN",
+                                  "fill": "$surface-primary",
+                                  "content": "选购",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 13,
+                                  "fontWeight": "600"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Cdzvl",
+                  "name": "Card 2",
+                  "width": 340,
+                  "fill": "$surface-primary",
+                  "cornerRadius": "$rounded-xl",
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "tKsjM",
+                      "name": "card2Img",
+                      "width": "fill_container",
+                      "height": 200,
+                      "fill": "$accent-secondary",
+                      "cornerRadius": [
+                        12,
+                        12,
+                        0,
+                        0
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "tRhVI",
+                          "content": "🧊",
+                          "fontFamily": "Inter",
+                          "fontSize": 64,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "rzu3G",
+                      "name": "card2Content",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": [
+                        24,
+                        24,
+                        32,
+                        24
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "wihoH",
+                          "fill": "$foreground-primary",
+                          "content": "冷萃冰咖啡",
+                          "fontFamily": "Playfair Display",
+                          "fontSize": 20,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "uwa7F",
+                          "fill": "$foreground-muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "12小时低温萃取，口感顺滑醇厚，带有天然可可香气",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Inter",
+                          "fontSize": 14
+                        },
+                        {
+                          "type": "frame",
+                          "id": "qB5cT",
+                          "name": "card2Footer",
+                          "width": "fill_container",
+                          "padding": [
+                            12,
+                            0,
+                            0,
+                            0
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "uEpAQ",
+                              "fill": "$accent-primary",
+                              "content": "¥28",
+                              "fontFamily": "Inter",
+                              "fontSize": 20,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "R2kcO6",
+                              "name": "card2Btn",
+                              "fill": "$accent-primary",
+                              "cornerRadius": "$rounded-full",
+                              "padding": [
+                                14,
+                                8
+                              ],
+                              "justifyContent": "center",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "wqXhT",
+                                  "fill": "$surface-primary",
+                                  "content": "选购",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 13,
+                                  "fontWeight": "600"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "i493d",
+                  "name": "Card 3",
+                  "width": 340,
+                  "fill": "$surface-primary",
+                  "cornerRadius": "$rounded-xl",
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "XOBWY",
+                      "name": "card3Img",
+                      "width": "fill_container",
+                      "height": 200,
+                      "fill": "$accent-secondary",
+                      "cornerRadius": [
+                        12,
+                        12,
+                        0,
+                        0
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "oVZvW",
+                          "content": "🍫",
+                          "fontFamily": "Inter",
+                          "fontSize": 64,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "aCv5f",
+                      "name": "card3Content",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": [
+                        24,
+                        24,
+                        32,
+                        24
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "QeZMO",
+                          "fill": "$foreground-primary",
+                          "content": "摩卡奇诺",
+                          "fontFamily": "Playfair Display",
+                          "fontSize": 20,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "o6Arf",
+                          "fill": "$foreground-muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "比利时巧克力与浓缩咖啡的甜蜜邂逅，顶部点缀奶油",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Inter",
+                          "fontSize": 14
+                        },
+                        {
+                          "type": "frame",
+                          "id": "gCihB",
+                          "name": "card3Footer",
+                          "width": "fill_container",
+                          "padding": [
+                            12,
+                            0,
+                            0,
+                            0
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "a5mvz9",
+                              "fill": "$accent-primary",
+                              "content": "¥36",
+                              "fontFamily": "Inter",
+                              "fontSize": 20,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "nnomx",
+                              "name": "card3Btn",
+                              "fill": "$accent-primary",
+                              "cornerRadius": "$rounded-full",
+                              "padding": [
+                                14,
+                                8
+                              ],
+                              "justifyContent": "center",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "mEaVW",
+                                  "fill": "$surface-primary",
+                                  "content": "选购",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 13,
+                                  "fontWeight": "600"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         },
         {
-          "type": "line",
-          "id": "CtwX0",
-          "x": 22,
-          "y": 20,
-          "name": "Line 2",
-          "width": 20,
-          "height": 0,
-          "stroke": {
-            "thickness": 2,
-            "fill": "#FFFFFF"
-          }
+          "type": "frame",
+          "id": "o9Oj5",
+          "name": "About Section",
+          "width": "fill_container",
+          "gap": 80,
+          "padding": [
+            100,
+            80
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "Q2ox2T",
+              "name": "About Visual",
+              "width": 440,
+              "height": 400,
+              "layout": "none",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "xFcTU",
+                  "x": 0,
+                  "y": 0,
+                  "name": "Image Placeholder",
+                  "width": 440,
+                  "height": 400,
+                  "fill": "$surface-secondary",
+                  "cornerRadius": "$rounded-xl"
+                },
+                {
+                  "type": "frame",
+                  "id": "Ou4fB",
+                  "x": 120,
+                  "y": 60,
+                  "name": "Window",
+                  "width": 200,
+                  "height": 160,
+                  "fill": "$accent-primary",
+                  "cornerRadius": 12
+                },
+                {
+                  "type": "frame",
+                  "id": "cAUZF",
+                  "x": 130,
+                  "y": 70,
+                  "name": "Window Pane L",
+                  "width": 80,
+                  "height": 140,
+                  "fill": "$surface-secondary"
+                },
+                {
+                  "type": "frame",
+                  "id": "t94pI",
+                  "x": 230,
+                  "y": 70,
+                  "name": "Window Pane R",
+                  "width": 80,
+                  "height": 140,
+                  "fill": "$surface-secondary"
+                },
+                {
+                  "type": "frame",
+                  "id": "MJpH4",
+                  "x": 160,
+                  "y": 240,
+                  "name": "Counter",
+                  "width": 120,
+                  "height": 80,
+                  "fill": "$accent-secondary",
+                  "cornerRadius": 8
+                },
+                {
+                  "type": "ellipse",
+                  "id": "dTZkz",
+                  "x": 200,
+                  "y": 260,
+                  "name": "Cup on Counter",
+                  "fill": "$surface-primary",
+                  "width": 24,
+                  "height": 24
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "G8IMGk",
+              "name": "About Content",
+              "width": 480,
+              "layout": "vertical",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "fAOgT",
+                  "fill": "$accent-primary",
+                  "content": "关于 Brew & Co.",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "UV5a1",
+                  "fill": "$foreground-primary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "不止是一家咖啡馆，更是城市中的温暖角落",
+                  "lineHeight": 1.3,
+                  "fontFamily": "Playfair Display",
+                  "fontSize": 36,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "dBCRP",
+                  "fill": "$foreground-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "自 2018 年创立以来，我们始终坚持从全球优质产区直采咖啡生豆，由经验丰富的烘焙师小批量手工烘焙。每一杯咖啡背后，都是我们对品质的执着与对社区的热爱。",
+                  "lineHeight": 1.7,
+                  "fontFamily": "Inter",
+                  "fontSize": 15
+                },
+                {
+                  "type": "frame",
+                  "id": "X2Kv5I",
+                  "name": "statsRow",
+                  "width": "fill_container",
+                  "gap": 40,
+                  "padding": [
+                    8,
+                    0,
+                    0,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "rpttu",
+                      "name": "stat1",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "dgMRC",
+                          "fill": "$accent-primary",
+                          "content": "8+",
+                          "fontFamily": "Playfair Display",
+                          "fontSize": 32,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "scLzT",
+                          "fill": "$foreground-muted",
+                          "content": "年品质坚守",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "V1J8e",
+                      "name": "stat2",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "j0opMK",
+                          "fill": "$accent-primary",
+                          "content": "50+",
+                          "fontFamily": "Playfair Display",
+                          "fontSize": 32,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "BFZnd",
+                          "fill": "$foreground-muted",
+                          "content": "款精选饮品",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "b6GCXF",
+                      "name": "stat3",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "nt21T",
+                          "fill": "$accent-primary",
+                          "content": "10k+",
+                          "fontFamily": "Playfair Display",
+                          "fontSize": 32,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "jwC00",
+                          "fill": "$foreground-muted",
+                          "content": "忠实顾客",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "B0AixV",
+                  "type": "ref",
+                  "ref": "y8XE0",
+                  "padding": [
+                    8,
+                    0,
+                    0,
+                    0
+                  ],
+                  "name": "aboutBtn",
+                  "descendants": {
+                    "FkFcH": {
+                      "content": "了解更多"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "fbSAO",
+          "name": "Footer",
+          "width": "fill_container",
+          "fill": "$foreground-primary",
+          "layout": "vertical",
+          "gap": 48,
+          "padding": [
+            60,
+            80,
+            40,
+            80
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "T42fUc",
+              "name": "footerTop",
+              "width": "fill_container",
+              "gap": 80,
+              "justifyContent": "space_between",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "KMmOu",
+                  "name": "footerBrand",
+                  "width": 320,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "AyfIx",
+                      "fill": "$foreground-muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "城市中心的精品咖啡体验。我们用每一杯咖啡，传递温暖与品质。",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    },
+                    {
+                      "type": "frame",
+                      "id": "tvnI0",
+                      "name": "Logo Row",
+                      "gap": 10,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "ZZHVF",
+                          "content": "☕",
+                          "fontFamily": "Inter",
+                          "fontSize": 24,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "dVDXb",
+                          "fill": "$surface-primary",
+                          "content": "Brew & Co.",
+                          "fontFamily": "Playfair Display",
+                          "fontSize": 20,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "S3X9d3",
+                  "name": "footerLinks1",
+                  "width": 140,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "j7VKb",
+                      "fill": "$surface-primary",
+                      "content": "菜单",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "XLRbT",
+                      "fill": "$foreground-muted",
+                      "content": "热饮",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    },
+                    {
+                      "type": "text",
+                      "id": "S1lQf",
+                      "fill": "$foreground-muted",
+                      "content": "冷饮",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    },
+                    {
+                      "type": "text",
+                      "id": "OFN0y",
+                      "fill": "$foreground-muted",
+                      "content": "甜点",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    },
+                    {
+                      "type": "text",
+                      "id": "hYJwg",
+                      "fill": "$foreground-muted",
+                      "content": "轻食",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Smu3Q",
+                  "name": "footerLinks2",
+                  "width": 140,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Symbm",
+                      "fill": "$surface-primary",
+                      "content": "关于",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "EyzsJ",
+                      "fill": "$foreground-muted",
+                      "content": "品牌故事",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    },
+                    {
+                      "type": "text",
+                      "id": "l4OAHp",
+                      "fill": "$foreground-muted",
+                      "content": "门店查询",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    },
+                    {
+                      "type": "text",
+                      "id": "UAbSo",
+                      "fill": "$foreground-muted",
+                      "content": "加入我们",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    },
+                    {
+                      "type": "text",
+                      "id": "eqspz",
+                      "fill": "$foreground-muted",
+                      "content": "常见问题",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "cbdI2",
+                  "name": "footerLinks3",
+                  "width": 160,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Zqytz",
+                      "fill": "$surface-primary",
+                      "content": "联系我们",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "tT3gl",
+                      "fill": "$foreground-muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "上海市静安区南京西路1688号",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    },
+                    {
+                      "type": "text",
+                      "id": "s7aPw",
+                      "fill": "$foreground-muted",
+                      "content": "021-5888-6666",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    },
+                    {
+                      "type": "text",
+                      "id": "kEUeu",
+                      "fill": "$foreground-muted",
+                      "content": "hello@brewandco.cn",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Ie7Va",
+              "name": "footerBottom",
+              "width": "fill_container",
+              "padding": [
+                20,
+                0,
+                0,
+                0
+              ],
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Zyhob",
+                  "fill": "$foreground-muted",
+                  "content": "© 2024 Brew & Co. All rights reserved.",
+                  "fontFamily": "Inter",
+                  "fontSize": 13
+                },
+                {
+                  "type": "frame",
+                  "id": "v8UKyB",
+                  "name": "footerSocial",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "t9lUUk",
+                      "fill": "$foreground-muted",
+                      "content": "微信",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "g41n5c",
+                      "fill": "$foreground-muted",
+                      "content": "微博",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "r8Jdbs",
+                      "fill": "$foreground-muted",
+                      "content": "小红书",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "xsr4T",
+      "x": 1520,
+      "y": 0,
+      "name": "Menu Page",
+      "width": 1440,
+      "fill": "$surface-primary",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "cFdWO",
+          "name": "menuNav",
+          "width": "fill_container",
+          "padding": [
+            80,
+            20
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "yi9Zb",
+              "name": "menuLogo",
+              "gap": 10,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "HyUP1",
+                  "content": "☕",
+                  "fontFamily": "Inter",
+                  "fontSize": 24,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "J9yAw",
+                  "fill": "$foreground-primary",
+                  "content": "Brew & Co.",
+                  "fontFamily": "Playfair Display",
+                  "fontSize": 20,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "fpIag",
+              "name": "menuNavLinks",
+              "gap": 40,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Zdzsn",
+                  "fill": "$foreground-secondary",
+                  "content": "首页",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "O7pPxg",
+                  "fill": "$accent-primary",
+                  "content": "菜单",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "EK0EA",
+                  "fill": "$foreground-secondary",
+                  "content": "关于我们",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "sHvMu",
+                  "fill": "$foreground-secondary",
+                  "content": "联系",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "id": "I0ALQ",
+              "type": "ref",
+              "ref": "y8XE0",
+              "name": "menuNavBtn",
+              "descendants": {
+                "FkFcH": {
+                  "content": "预约订座"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "gVqTM",
+          "width": "fill_container",
+          "height": 1,
+          "fill": "$border-subtle"
+        },
+        {
+          "type": "frame",
+          "id": "Z5xEi",
+          "name": "menuHero",
+          "width": "fill_container",
+          "fill": "$surface-secondary",
+          "layout": "vertical",
+          "padding": [
+            60,
+            80
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "F0x7R",
+              "fill": "$accent-primary",
+              "content": "我们的菜单",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "xyQyU",
+              "fill": "$foreground-primary",
+              "content": "精心制作每一杯",
+              "fontFamily": "Playfair Display",
+              "fontSize": 44,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "TlQSE",
+              "fill": "$foreground-muted",
+              "content": "从经典到创意，每一款饮品都承载着我们对品质的承诺",
+              "fontFamily": "Inter",
+              "fontSize": 16
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "mI0wJ",
+          "name": "Hot Drinks",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 32,
+          "padding": [
+            60,
+            80
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "gUUbL",
+              "name": "hotHeader",
+              "width": "fill_container",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "A22FG",
+                  "width": 40,
+                  "height": 2,
+                  "fill": "$accent-primary"
+                },
+                {
+                  "type": "text",
+                  "id": "E2l6AX",
+                  "fill": "$foreground-primary",
+                  "content": "热饮",
+                  "fontFamily": "Playfair Display",
+                  "fontSize": 28,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "VhNyj",
+                  "width": "fill_container",
+                  "height": 2,
+                  "fill": "$border-subtle"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "hlaqx",
+              "name": "hotGrid",
+              "width": "fill_container",
+              "gap": 60,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "WJnPZ",
+                  "name": "hotCol1",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "xApBB",
+                      "name": "mi1",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "tutrW",
+                          "name": "mi1Row",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "SCQkF",
+                              "fill": "$foreground-primary",
+                              "content": "经典拿铁",
+                              "fontFamily": "Playfair Display",
+                              "fontSize": 18,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "gOiIw",
+                              "fill": "$accent-primary",
+                              "content": "¥32",
+                              "fontFamily": "Inter",
+                              "fontSize": 18,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "mSPPX",
+                          "fill": "$foreground-muted",
+                          "content": "丝滑牛奶与浓缩咖啡的完美融合",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "y9uFp",
+                      "name": "mi2",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "rp4CX",
+                          "name": "mi2Row",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "nf09g",
+                              "fill": "$foreground-primary",
+                              "content": "卡布奇诺",
+                              "fontFamily": "Playfair Display",
+                              "fontSize": 18,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "Xidj8",
+                              "fill": "$accent-primary",
+                              "content": "¥30",
+                              "fontFamily": "Inter",
+                              "fontSize": 18,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "EYBFm",
+                          "fill": "$foreground-muted",
+                          "content": "意式浓缩加厚实奶泡，口感丰富",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "G2sge",
+                      "name": "mi3",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "lSBZ9",
+                          "name": "mi3Row",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "B7ooUE",
+                              "fill": "$foreground-primary",
+                              "content": "摩卡奇诺",
+                              "fontFamily": "Playfair Display",
+                              "fontSize": 18,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "EZPPl",
+                              "fill": "$accent-primary",
+                              "content": "¥36",
+                              "fontFamily": "Inter",
+                              "fontSize": 18,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "XVJ40",
+                          "fill": "$foreground-muted",
+                          "content": "比利时巧克力与浓缩咖啡的甜蜜邂逅",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "uDPkF",
+                  "name": "hotCol2",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "AMLRO",
+                      "name": "mi4",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "Lx2Sq",
+                          "name": "mi4Row",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "sCQJN",
+                              "fill": "$foreground-primary",
+                              "content": "美式咖啡",
+                              "fontFamily": "Playfair Display",
+                              "fontSize": 18,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "gxKvC",
+                              "fill": "$accent-primary",
+                              "content": "¥26",
+                              "fontFamily": "Inter",
+                              "fontSize": 18,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "nKGJd",
+                          "fill": "$foreground-muted",
+                          "content": "经典美式，简洁纯粹的口感",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "h9rSjl",
+                      "name": "mi5",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "kYk60",
+                          "name": "mi5Row",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "ZGszC",
+                              "fill": "$foreground-primary",
+                              "content": "焦糖玛奇朵",
+                              "fontFamily": "Playfair Display",
+                              "fontSize": 18,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "L1fGK",
+                              "fill": "$accent-primary",
+                              "content": "¥34",
+                              "fontFamily": "Inter",
+                              "fontSize": 18,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "qFvBj",
+                          "fill": "$foreground-muted",
+                          "content": "香草与焦糖的完美搭配",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "oLtM0",
+                      "name": "mi6",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "vMTVu",
+                          "name": "mi6Row",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "H3oW3r",
+                              "fill": "$foreground-primary",
+                              "content": "澳白咖啡",
+                              "fontFamily": "Playfair Display",
+                              "fontSize": 18,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "SvenF",
+                              "fill": "$accent-primary",
+                              "content": "¥28",
+                              "fontFamily": "Inter",
+                              "fontSize": 18,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "PGLjt",
+                          "fill": "$foreground-muted",
+                          "content": "澳洲风格的丝滑平白咖啡",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "UPq1K",
+                      "name": "mi7",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "tNjcz",
+                          "name": "mi7Row",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "B6AMij",
+                              "fill": "$foreground-primary",
+                              "content": "抹茶拿铁",
+                              "fontFamily": "Playfair Display",
+                              "fontSize": 18,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "C5FIOw",
+                              "fill": "$accent-primary",
+                              "content": "¥33",
+                              "fontFamily": "Inter",
+                              "fontSize": 18,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "DUJXK",
+                          "fill": "$foreground-muted",
+                          "content": "日本宇治抹茶与牛奶的日式风味",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Y7Ijup",
+          "name": "Cold Drinks",
+          "width": "fill_container",
+          "fill": "$surface-secondary",
+          "layout": "vertical",
+          "gap": 32,
+          "padding": [
+            40,
+            80
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "d37xWj",
+              "name": "coldHeader",
+              "width": "fill_container",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "hp6l2",
+                  "width": 40,
+                  "height": 2,
+                  "fill": "$accent-primary"
+                },
+                {
+                  "type": "text",
+                  "id": "DwuZ3",
+                  "fill": "$foreground-primary",
+                  "content": "冷饮",
+                  "fontFamily": "Playfair Display",
+                  "fontSize": 28,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "h9YtJ",
+                  "width": "fill_container",
+                  "height": 2,
+                  "fill": "$border-subtle"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "EggQD",
+              "name": "coldGrid",
+              "width": "fill_container",
+              "gap": 60,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "tssrN",
+                  "name": "coldCol1",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "Mb0hn",
+                      "name": "ci1",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "v5WGaT",
+                          "name": "ci1Row",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "jNRwg",
+                              "fill": "$foreground-primary",
+                              "content": "冷萃冰咖啡",
+                              "fontFamily": "Playfair Display",
+                              "fontSize": 18,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "vFnOJ",
+                              "fill": "$accent-primary",
+                              "content": "¥28",
+                              "fontFamily": "Inter",
+                              "fontSize": 18,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "L3DQP",
+                          "fill": "$foreground-muted",
+                          "content": "12小时低温萃取，口感顺滑醇厚",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Tuuh8",
+                      "name": "ci2",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "To8qx",
+                          "name": "ci2Row",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "NHK0r",
+                              "fill": "$foreground-primary",
+                              "content": "冰拿铁",
+                              "fontFamily": "Playfair Display",
+                              "fontSize": 18,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "uZTgy",
+                              "fill": "$accent-primary",
+                              "content": "¥32",
+                              "fontFamily": "Inter",
+                              "fontSize": 18,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "Iz49F",
+                          "fill": "$foreground-muted",
+                          "content": "冰镇牛奶与浓缩咖啡的清爽组合",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "P3P0Y",
+                      "name": "ci3",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "R5I3lv",
+                          "name": "ci3Row",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "IugWL",
+                              "fill": "$foreground-primary",
+                              "content": "冰摇柠檬茶",
+                              "fontFamily": "Playfair Display",
+                              "fontSize": 18,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "TWZRO",
+                              "fill": "$accent-primary",
+                              "content": "¥25",
+                              "fontFamily": "Inter",
+                              "fontSize": 18,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "FQWGv",
+                          "fill": "$foreground-muted",
+                          "content": "新鲜柠檬手摇，酸甜清爽",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "jw9lQ",
+                  "name": "coldCol2",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "uTHqh",
+                      "name": "ci4",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "ttjfX",
+                          "name": "ci4Row",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "f47Dai",
+                              "fill": "$foreground-primary",
+                              "content": "芒果冰沙",
+                              "fontFamily": "Playfair Display",
+                              "fontSize": 18,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "KBcjJ",
+                              "fill": "$accent-primary",
+                              "content": "¥30",
+                              "fontFamily": "Inter",
+                              "fontSize": 18,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "mqDDd",
+                          "fill": "$foreground-muted",
+                          "content": "新鲜芒果果肉打制的浓郁冰沙",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "b7Z2RN",
+                      "name": "ci5",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "R2EtSA",
+                          "name": "ci5Row",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "oi3fw",
+                              "fill": "$foreground-primary",
+                              "content": "抹茶星冰乐",
+                              "fontFamily": "Playfair Display",
+                              "fontSize": 18,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "rzrWw",
+                              "fill": "$accent-primary",
+                              "content": "¥35",
+                              "fontFamily": "Inter",
+                              "fontSize": 18,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "H5DnD",
+                          "fill": "$foreground-muted",
+                          "content": "宇治抹茶与奶油的冰爽碰撞",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "QUl53",
+                      "name": "ci6",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "A4dBD",
+                          "name": "ci6Row",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "zOcpU",
+                              "fill": "$foreground-primary",
+                              "content": "气泡美式",
+                              "fontFamily": "Playfair Display",
+                              "fontSize": 18,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "ZZYjg",
+                              "fill": "$accent-primary",
+                              "content": "¥28",
+                              "fontFamily": "Inter",
+                              "fontSize": 18,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "TZFzj",
+                          "fill": "$foreground-muted",
+                          "content": "汤力水与浓缩咖啡的创意融合",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "w7NaQa",
+          "name": "Desserts",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 32,
+          "padding": [
+            40,
+            80
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "yB2Gt",
+              "name": "dessertHeader",
+              "width": "fill_container",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "okii4",
+                  "width": 40,
+                  "height": 2,
+                  "fill": "$accent-primary"
+                },
+                {
+                  "type": "text",
+                  "id": "emjAu",
+                  "fill": "$foreground-primary",
+                  "content": "甜点",
+                  "fontFamily": "Playfair Display",
+                  "fontSize": 28,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "Oke4p",
+                  "width": "fill_container",
+                  "height": 2,
+                  "fill": "$border-subtle"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "VF1Kl",
+              "name": "dessertGrid",
+              "width": "fill_container",
+              "gap": 60,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Xja3k",
+                  "name": "dessertCol1",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "oKNcr",
+                      "name": "d1",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "hZSZK",
+                          "name": "d1Row",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "hu1HN",
+                              "fill": "$foreground-primary",
+                              "content": "提拉米苏",
+                              "fontFamily": "Playfair Display",
+                              "fontSize": 18,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "EWVlB",
+                              "fill": "$accent-primary",
+                              "content": "¥38",
+                              "fontFamily": "Inter",
+                              "fontSize": 18,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "gC5BP",
+                          "fill": "$foreground-muted",
+                          "content": "经典意式甜点，马斯卡彭奶酪的丝滑享受",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "qq8pd",
+                      "name": "d2",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "h1bBbZ",
+                          "name": "d2Row",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "J2H1Cv",
+                              "fill": "$foreground-primary",
+                              "content": "抹茶千层",
+                              "fontFamily": "Playfair Display",
+                              "fontSize": 18,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "g4MA12",
+                              "fill": "$accent-primary",
+                              "content": "¥42",
+                              "fontFamily": "Inter",
+                              "fontSize": 18,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "o6p9oE",
+                          "fill": "$foreground-muted",
+                          "content": "二十层手工薄饼，抹茶奶油层层叠加",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "l4V6zl",
+                      "name": "d3",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "FNJcY",
+                          "name": "d3Row",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "SrfJz",
+                              "fill": "$foreground-primary",
+                              "content": "纽约芝士蛋糕",
+                              "fontFamily": "Playfair Display",
+                              "fontSize": 18,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "Tphld",
+                              "fill": "$accent-primary",
+                              "content": "¥36",
+                              "fontFamily": "Inter",
+                              "fontSize": 18,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "K4UKwN",
+                          "fill": "$foreground-muted",
+                          "content": "浓郁芝士，绵密口感，经典美式风味",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "m0bUF",
+                  "name": "dessertCol2",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "P0n8RV",
+                      "name": "d4",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "HPm25",
+                          "name": "d4Row",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "o5DNE",
+                              "fill": "$foreground-primary",
+                              "content": "可颂华夫饼",
+                              "fontFamily": "Playfair Display",
+                              "fontSize": 18,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "ZNQZW",
+                              "fill": "$accent-primary",
+                              "content": "¥34",
+                              "fontFamily": "Inter",
+                              "fontSize": 18,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "dH8Ao",
+                          "fill": "$foreground-muted",
+                          "content": "酥脆可颂面团压烤，搭配枫糖浆",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "UzEwM",
+                      "name": "d5",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "WttbU",
+                          "name": "d5Row",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "O0Pfm",
+                              "fill": "$foreground-primary",
+                              "content": "焦糖布丁",
+                              "fontFamily": "Playfair Display",
+                              "fontSize": 18,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "p7wma",
+                              "fill": "$accent-primary",
+                              "content": "¥28",
+                              "fontFamily": "Inter",
+                              "fontSize": 18,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "bhtJj",
+                          "fill": "$foreground-muted",
+                          "content": "法式焦糖布丁，嫩滑奶香",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "q7I40",
+                      "name": "d6",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "QDl32",
+                          "name": "d6Row",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "l51ahV",
+                              "fill": "$foreground-primary",
+                              "content": "巧克力熔岩蛋糕",
+                              "fontFamily": "Playfair Display",
+                              "fontSize": 18,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "mloaA",
+                              "fill": "$accent-primary",
+                              "content": "¥40",
+                              "fontFamily": "Inter",
+                              "fontSize": 18,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "It9w9",
+                          "fill": "$foreground-muted",
+                          "content": "70%黑巧克力，切开流淌的浓郁内心",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "aUqzR",
+          "name": "Light Food",
+          "width": "fill_container",
+          "fill": "$surface-secondary",
+          "layout": "vertical",
+          "gap": 32,
+          "padding": [
+            40,
+            80
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "C0RVSf",
+              "name": "foodHeader",
+              "width": "fill_container",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "bAbMq",
+                  "width": 40,
+                  "height": 2,
+                  "fill": "$accent-primary"
+                },
+                {
+                  "type": "text",
+                  "id": "OuQbv",
+                  "fill": "$foreground-primary",
+                  "content": "轻食",
+                  "fontFamily": "Playfair Display",
+                  "fontSize": 28,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "MlNBH",
+                  "width": "fill_container",
+                  "height": 2,
+                  "fill": "$border-subtle"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "T4FrKl",
+              "name": "foodGrid",
+              "width": "fill_container",
+              "gap": 60,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "gZ3Sv",
+                  "name": "foodCol1",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "P5UWn",
+                      "name": "f1",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "CPIMc",
+                          "name": "f1Row",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "uBLym",
+                              "fill": "$foreground-primary",
+                              "content": "牛油果吐司",
+                              "fontFamily": "Playfair Display",
+                              "fontSize": 18,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "faVW7",
+                              "fill": "$accent-primary",
+                              "content": "¥42",
+                              "fontFamily": "Inter",
+                              "fontSize": 18,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "TGnno",
+                          "fill": "$foreground-muted",
+                          "content": "新鲜牛油果配全麦酸面包",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "GusYz",
+                      "name": "f2",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "MPqdz",
+                          "name": "f2Row",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "k1aek",
+                              "fill": "$foreground-primary",
+                              "content": "烟熏三文鱼贝果",
+                              "fontFamily": "Playfair Display",
+                              "fontSize": 18,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "tkhsp",
+                              "fill": "$accent-primary",
+                              "content": "¥48",
+                              "fontFamily": "Inter",
+                              "fontSize": 18,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "xalGc",
+                          "fill": "$foreground-muted",
+                          "content": "挪威烟熏三文鱼配奶油芝士",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Rle1N",
+                      "name": "f3",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "g1wbez",
+                          "name": "f3Row",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "PUSTi",
+                              "fill": "$foreground-primary",
+                              "content": "凯撒沙拉",
+                              "fontFamily": "Playfair Display",
+                              "fontSize": 18,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "S1pkhb",
+                              "fill": "$accent-primary",
+                              "content": "¥38",
+                              "fontFamily": "Inter",
+                              "fontSize": 18,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "TazVb",
+                          "fill": "$foreground-muted",
+                          "content": "罗马生菜、培根碎、帕尔马干酪",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "u4jbBx",
+                  "name": "foodCol2",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "uOMmb",
+                      "name": "f4",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "Z9qp5P",
+                          "name": "f4Row",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "EBlwp",
+                              "fill": "$foreground-primary",
+                              "content": "火腿芝士帕尼尼",
+                              "fontFamily": "Playfair Display",
+                              "fontSize": 18,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "J7tgS",
+                              "fill": "$accent-primary",
+                              "content": "¥40",
+                              "fontFamily": "Inter",
+                              "fontSize": 18,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "oHby1",
+                          "fill": "$foreground-muted",
+                          "content": "帕尔马火腿配马苏里拉芝士热压",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "G2ygS",
+                      "name": "f5",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "mDhIS",
+                          "name": "f5Row",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "dkihM",
+                              "fill": "$foreground-primary",
+                              "content": "法式可颂",
+                              "fontFamily": "Playfair Display",
+                              "fontSize": 18,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "iweG7",
+                              "fill": "$accent-primary",
+                              "content": "¥26",
+                              "fontFamily": "Inter",
+                              "fontSize": 18,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "w8FBZ0",
+                          "fill": "$foreground-muted",
+                          "content": "法国进口黄油，层层酥脆",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "LYL52",
+                      "name": "f6",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "ls8gI",
+                          "name": "f6Row",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "asKiy",
+                              "fill": "$foreground-primary",
+                              "content": "松饼套餐",
+                              "fontFamily": "Playfair Display",
+                              "fontSize": 18,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "ymhtC",
+                              "fill": "$accent-primary",
+                              "content": "¥45",
+                              "fontFamily": "Inter",
+                              "fontSize": 18,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "i2pOYo",
+                          "fill": "$foreground-muted",
+                          "content": "松软美式松饼配莓果和蜂蜜",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "jAmgI",
+          "name": "Menu Footer",
+          "width": "fill_container",
+          "fill": "$foreground-primary",
+          "layout": "vertical",
+          "gap": 48,
+          "padding": [
+            60,
+            80,
+            40,
+            80
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "Q1Q5GM",
+              "name": "menuFooterTop",
+              "width": "fill_container",
+              "gap": 80,
+              "justifyContent": "space_between",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "RKvtI",
+                  "name": "menuFootBrand",
+                  "width": 300,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "nCn6Z",
+                      "name": "menuFootLogo",
+                      "gap": 10,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Blej0",
+                          "content": "☕",
+                          "fontFamily": "Inter",
+                          "fontSize": 24,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "z65udZ",
+                          "fill": "$surface-primary",
+                          "content": "Brew & Co.",
+                          "fontFamily": "Playfair Display",
+                          "fontSize": 20,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "f73gNz",
+                      "fill": "$foreground-muted",
+                      "content": "用心做好每一杯咖啡",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "xsHEm",
+                  "name": "mfLinks1",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "YdXTs",
+                      "fill": "$surface-primary",
+                      "content": "菜单",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "hITJ1",
+                      "fill": "$foreground-muted",
+                      "content": "热饮",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    },
+                    {
+                      "type": "text",
+                      "id": "qJvTM",
+                      "fill": "$foreground-muted",
+                      "content": "冷饮",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    },
+                    {
+                      "type": "text",
+                      "id": "m27fud",
+                      "fill": "$foreground-muted",
+                      "content": "甜点",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    },
+                    {
+                      "type": "text",
+                      "id": "T4fdzl",
+                      "fill": "$foreground-muted",
+                      "content": "轻食",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "E9isL",
+                  "name": "mfLinks2",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Z42ZkS",
+                      "fill": "$surface-primary",
+                      "content": "关于",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "QKDSv",
+                      "fill": "$foreground-muted",
+                      "content": "品牌故事",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    },
+                    {
+                      "type": "text",
+                      "id": "oxzsY",
+                      "fill": "$foreground-muted",
+                      "content": "门店查询",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    },
+                    {
+                      "type": "text",
+                      "id": "Bb0jJ",
+                      "fill": "$foreground-muted",
+                      "content": "加入我们",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "DzeZP",
+                  "name": "mfLinks3",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "nnKnr",
+                      "fill": "$surface-primary",
+                      "content": "营业时间",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "lWlxo",
+                      "fill": "$foreground-muted",
+                      "content": "周一至周五 7:00 - 22:00",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    },
+                    {
+                      "type": "text",
+                      "id": "BqK3w",
+                      "fill": "$foreground-muted",
+                      "content": "周六至周日 8:00 - 23:00",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "fYbS9",
+              "name": "menuFooterBottom",
+              "width": "fill_container",
+              "padding": [
+                20,
+                0,
+                0,
+                0
+              ],
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "y82rw6",
+                  "fill": "$foreground-muted",
+                  "content": "© 2024 Brew & Co. All rights reserved.",
+                  "fontFamily": "Inter",
+                  "fontSize": 13
+                },
+                {
+                  "type": "frame",
+                  "id": "iYVBW",
+                  "name": "menuFootSocial",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "JUAI1",
+                      "fill": "$foreground-muted",
+                      "content": "微信",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "xq0mK",
+                      "fill": "$foreground-muted",
+                      "content": "微博",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Bt5qy",
+                      "fill": "$foreground-muted",
+                      "content": "小红书",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "MbXMM",
+      "x": 3040,
+      "y": 0,
+      "name": "About Page",
+      "width": 1440,
+      "fill": "$surface-primary",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "v9eI33",
+          "name": "aboutNav",
+          "width": "fill_container",
+          "padding": [
+            80,
+            20
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "ngwLb",
+              "name": "aLogo",
+              "gap": 10,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "nPjOD",
+                  "content": "☕",
+                  "fontFamily": "Inter",
+                  "fontSize": 24,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "mKpmH",
+                  "fill": "$foreground-primary",
+                  "content": "Brew & Co.",
+                  "fontFamily": "Playfair Display",
+                  "fontSize": 20,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "fkFSv",
+              "name": "aNavLinks",
+              "gap": 40,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "CT7K6",
+                  "fill": "$foreground-secondary",
+                  "content": "首页",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "BUgyV",
+                  "fill": "$foreground-secondary",
+                  "content": "菜单",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "kw9mF",
+                  "fill": "$accent-primary",
+                  "content": "关于我们",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "Gdkim",
+                  "fill": "$foreground-secondary",
+                  "content": "联系",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "id": "mkwrK",
+              "type": "ref",
+              "ref": "y8XE0",
+              "name": "aNavBtn",
+              "descendants": {
+                "FkFcH": {
+                  "content": "预约订座"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "ejLY8",
+          "width": "fill_container",
+          "height": 1,
+          "fill": "$border-subtle"
+        },
+        {
+          "type": "frame",
+          "id": "NkGN2",
+          "name": "aboutHero",
+          "width": "fill_container",
+          "fill": "$surface-secondary",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": 80,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "Q58a3y",
+              "fill": "$accent-primary",
+              "content": "关于我们",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "T3A4P",
+              "fill": "$foreground-primary",
+              "content": "每一杯咖啡背后，都有一个故事",
+              "fontFamily": "Playfair Display",
+              "fontSize": 44,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "N1iBc",
+              "fill": "$foreground-muted",
+              "content": "从一颗豆到一杯咖啡，我们用心做好每一步",
+              "fontFamily": "Inter",
+              "fontSize": 16
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "oZfbC",
+          "name": "Story Section",
+          "width": "fill_container",
+          "gap": 80,
+          "padding": 80,
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "FQTJO",
+              "name": "storyVisual",
+              "width": 440,
+              "height": 360,
+              "layout": "none",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "f1rnl",
+                  "x": 0,
+                  "y": 0,
+                  "width": 440,
+                  "height": 360,
+                  "fill": "$surface-secondary",
+                  "cornerRadius": "$rounded-xl"
+                },
+                {
+                  "type": "frame",
+                  "id": "X9Z1Z",
+                  "x": 140,
+                  "y": 60,
+                  "width": 160,
+                  "height": 130,
+                  "fill": "$accent-primary",
+                  "cornerRadius": 12
+                },
+                {
+                  "type": "ellipse",
+                  "id": "jIFnR",
+                  "x": 85,
+                  "y": 160,
+                  "fill": "$accent-secondary",
+                  "width": 110,
+                  "height": 110
+                },
+                {
+                  "type": "frame",
+                  "id": "r1lhyb",
+                  "x": 130,
+                  "y": 220,
+                  "width": 180,
+                  "height": 50,
+                  "fill": "$surface-secondary",
+                  "cornerRadius": 8
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "ogg8s",
+              "name": "storyContent",
+              "width": 480,
+              "layout": "vertical",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "lkYkO",
+                  "fill": "$accent-primary",
+                  "content": "我们的故事",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "W5FcDD",
+                  "fill": "$foreground-primary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "从热爱到事业",
+                  "fontFamily": "Playfair Display",
+                  "fontSize": 36,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "o63us",
+                  "fill": "$foreground-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "2018年，创始人 Alex 辞去金融工作，在上海市中心开了第一家 Brew & Co.。他的梦想很简单：让每个人都能在城市中找到属于自己的温暖角落，享受一杯真正的好咖啡。\n\n从最初只有 3 名员工的小店，到如今遍布上海的 5 家分店，我们始终坚持手工烘焙、匠心制作。",
+                  "lineHeight": 1.7,
+                  "fontFamily": "Inter",
+                  "fontSize": 15
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "aXMnA",
+          "name": "Values",
+          "width": "fill_container",
+          "fill": "$surface-secondary",
+          "layout": "vertical",
+          "gap": 40,
+          "padding": [
+            60,
+            80
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "CQl72",
+              "fill": "$accent-primary",
+              "content": "我们的价值观",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "kFvEb",
+              "fill": "$foreground-primary",
+              "content": "坚持做好每一件小事",
+              "fontFamily": "Playfair Display",
+              "fontSize": 36,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "s6eeX",
+              "name": "valuesRow",
+              "width": "fill_container",
+              "gap": 32,
+              "justifyContent": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Tr9XD",
+                  "name": "v1",
+                  "width": "fill_container",
+                  "fill": "$surface-primary",
+                  "cornerRadius": "$rounded-xl",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": 32,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "o7NQsP",
+                      "content": "🌱",
+                      "fontFamily": "Inter",
+                      "fontSize": 40,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "pfIc1",
+                      "fill": "$foreground-primary",
+                      "content": "品质优先",
+                      "fontFamily": "Playfair Display",
+                      "fontSize": 20,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "gwAx4",
+                      "fill": "$foreground-muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "从全球优质产区直采咖啡豆，小批量手工烘焙",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "jkavw",
+                  "name": "v2",
+                  "width": "fill_container",
+                  "fill": "$surface-primary",
+                  "cornerRadius": "$rounded-xl",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": 32,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "b73y9e",
+                      "content": "🤝",
+                      "fontFamily": "Inter",
+                      "fontSize": 40,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "l46mb",
+                      "fill": "$foreground-primary",
+                      "content": "社区联结",
+                      "fontFamily": "Playfair Display",
+                      "fontSize": 20,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "v5xjkT",
+                      "fill": "$foreground-muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "打造温暖的社交空间，连接城市中的你我",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "IEwuO",
+                  "name": "v3",
+                  "width": "fill_container",
+                  "fill": "$surface-primary",
+                  "cornerRadius": "$rounded-xl",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": 32,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "otILN",
+                      "content": "🌍",
+                      "fontFamily": "Inter",
+                      "fontSize": 40,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "HzmXC",
+                      "fill": "$foreground-primary",
+                      "content": "可持续发展",
+                      "fontFamily": "Playfair Display",
+                      "fontSize": 20,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "vKx2o",
+                      "fill": "$foreground-muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "环保包装、碳中和配送，守护我们的地球",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "je5cS",
+          "name": "Team",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 40,
+          "padding": [
+            60,
+            80
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "EOh9j",
+              "fill": "$accent-primary",
+              "content": "我们的团队",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "b3DJc",
+              "fill": "$foreground-primary",
+              "content": "一群热爱咖啡的人",
+              "fontFamily": "Playfair Display",
+              "fontSize": 36,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "wZGee",
+              "name": "teamRow",
+              "width": "fill_container",
+              "gap": 40,
+              "justifyContent": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "elXN1",
+                  "name": "tm1",
+                  "width": 280,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "xwrT4",
+                      "width": 120,
+                      "height": 120,
+                      "fill": "$surface-secondary",
+                      "cornerRadius": "$rounded-full",
+                      "justifyContent": "center",
+                      "alignItems": "center"
+                    },
+                    {
+                      "type": "text",
+                      "id": "DX2H4",
+                      "content": "🧑",
+                      "fontFamily": "Inter",
+                      "fontSize": 48,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "ymrXf",
+                      "fill": "$foreground-primary",
+                      "content": "Alex Chen",
+                      "fontFamily": "Playfair Display",
+                      "fontSize": 18,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "V2Gh1",
+                      "fill": "$accent-primary",
+                      "content": "创始人 & 首席烘焙师",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "NsMCR",
+                      "fill": "$foreground-muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "前金融从业者，Q-Grader 认证咖啡品鉴师",
+                      "fontFamily": "Inter",
+                      "fontSize": 13
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "rty7V",
+                  "name": "tm2",
+                  "width": 280,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "UAcgx",
+                      "width": 120,
+                      "height": 120,
+                      "fill": "$surface-secondary",
+                      "cornerRadius": "$rounded-full",
+                      "justifyContent": "center",
+                      "alignItems": "center"
+                    },
+                    {
+                      "type": "text",
+                      "id": "cs687",
+                      "content": "👩",
+                      "fontFamily": "Inter",
+                      "fontSize": 48,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "AGvV3",
+                      "fill": "$foreground-primary",
+                      "content": "Lisa Wang",
+                      "fontFamily": "Playfair Display",
+                      "fontSize": 18,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "KlmMX",
+                      "fill": "$accent-primary",
+                      "content": "运营总监",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "C5bVLF",
+                      "fill": "$foreground-muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "负责五家门店的运营管理与客户体验",
+                      "fontFamily": "Inter",
+                      "fontSize": 13
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "cLgqi",
+                  "name": "tm3",
+                  "width": 280,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "MZbeV",
+                      "width": 120,
+                      "height": 120,
+                      "fill": "$surface-secondary",
+                      "cornerRadius": "$rounded-full",
+                      "justifyContent": "center",
+                      "alignItems": "center"
+                    },
+                    {
+                      "type": "text",
+                      "id": "hDqBB",
+                      "content": "👨",
+                      "fontFamily": "Inter",
+                      "fontSize": 48,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "qR09g",
+                      "fill": "$foreground-primary",
+                      "content": "Mike Liu",
+                      "fontFamily": "Playfair Display",
+                      "fontSize": 18,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "ornyK",
+                      "fill": "$accent-primary",
+                      "content": "饮品研发主管",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Qy5O6",
+                      "fill": "$foreground-muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "两届中国咖啡冲煮大赛冠军",
+                      "fontFamily": "Inter",
+                      "fontSize": 13
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "e2ZSZ",
+          "name": "Timeline",
+          "width": "fill_container",
+          "fill": "$surface-secondary",
+          "layout": "vertical",
+          "gap": 40,
+          "padding": [
+            60,
+            80
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "widYo",
+              "fill": "$accent-primary",
+              "content": "发展历程",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "XaLVV",
+              "fill": "$foreground-primary",
+              "content": "一路走来的脚印",
+              "fontFamily": "Playfair Display",
+              "fontSize": 36,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "QDQWy",
+              "name": "tlRow",
+              "width": "fill_container",
+              "justifyContent": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "RtvAW",
+                  "name": "tl1",
+                  "width": 250,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "zLnpC",
+                      "width": 16,
+                      "height": 16,
+                      "fill": "$accent-primary",
+                      "cornerRadius": "$rounded-full"
+                    },
+                    {
+                      "type": "text",
+                      "id": "PULAj",
+                      "fill": "$accent-primary",
+                      "content": "2018",
+                      "fontFamily": "Playfair Display",
+                      "fontSize": 24,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "y9Crby",
+                      "fill": "$foreground-primary",
+                      "content": "第一家门店开业",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "yf6ew",
+                      "fill": "$foreground-muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "上海市静安区，30平米的小店梦开始的地方",
+                      "fontFamily": "Inter",
+                      "fontSize": 13
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "UVU5m",
+                  "width": 80,
+                  "height": 2,
+                  "fill": "$border-subtle"
+                },
+                {
+                  "type": "frame",
+                  "id": "PEseq",
+                  "name": "tl2",
+                  "width": 250,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "Bta8m",
+                      "width": 16,
+                      "height": 16,
+                      "fill": "$accent-primary",
+                      "cornerRadius": "$rounded-full"
+                    },
+                    {
+                      "type": "text",
+                      "id": "YDhjt",
+                      "fill": "$accent-primary",
+                      "content": "2020",
+                      "fontFamily": "Playfair Display",
+                      "fontSize": 24,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "nnA6T",
+                      "fill": "$foreground-primary",
+                      "content": "自建烘焙工厂",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "doDhP",
+                      "fill": "$foreground-muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "在松江区建立烘焙工厂，实现全流程品控",
+                      "fontFamily": "Inter",
+                      "fontSize": 13
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "MEDoS",
+                  "width": 80,
+                  "height": 2,
+                  "fill": "$border-subtle"
+                },
+                {
+                  "type": "frame",
+                  "id": "hhRQg",
+                  "name": "tl3",
+                  "width": 250,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "qwE0F",
+                      "width": 16,
+                      "height": 16,
+                      "fill": "$accent-primary",
+                      "cornerRadius": "$rounded-full"
+                    },
+                    {
+                      "type": "text",
+                      "id": "usS2m",
+                      "fill": "$accent-primary",
+                      "content": "2022",
+                      "fontFamily": "Playfair Display",
+                      "fontSize": 24,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "E293J",
+                      "fill": "$foreground-primary",
+                      "content": "五店齐开",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "BJX24",
+                      "fill": "$foreground-muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "覆盖上海核心商圈，会员突破10,000人",
+                      "fontFamily": "Inter",
+                      "fontSize": 13
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "rbvo9",
+                  "width": 80,
+                  "height": 2,
+                  "fill": "$border-subtle"
+                },
+                {
+                  "type": "frame",
+                  "id": "dUxka",
+                  "name": "tl4",
+                  "width": 250,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "gQx52",
+                      "width": 16,
+                      "height": 16,
+                      "fill": "$accent-primary",
+                      "cornerRadius": "$rounded-full"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Na28A",
+                      "fill": "$accent-primary",
+                      "content": "2024",
+                      "fontFamily": "Playfair Display",
+                      "fontSize": 24,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "mLx3t",
+                      "fill": "$foreground-primary",
+                      "content": "走向全国",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "TZntN",
+                      "fill": "$foreground-muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "启动全国加盟，让更多人喝到好咖啡",
+                      "fontFamily": "Inter",
+                      "fontSize": 13
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "z7dbl",
+          "name": "afFooter",
+          "width": "fill_container",
+          "fill": "$foreground-primary",
+          "layout": "vertical",
+          "gap": 48,
+          "padding": [
+            60,
+            80,
+            40,
+            80
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "cAfCZ",
+              "name": "afTop",
+              "width": "fill_container",
+              "gap": 80,
+              "justifyContent": "space_between",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "pkSTv",
+                  "name": "afBrand",
+                  "width": 300,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "NO2ap",
+                      "name": "afLogo",
+                      "gap": 10,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "EaErz",
+                          "content": "☕",
+                          "fontFamily": "Inter",
+                          "fontSize": 24,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Ed8z9",
+                          "fill": "$surface-primary",
+                          "content": "Brew & Co.",
+                          "fontFamily": "Playfair Display",
+                          "fontSize": 20,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "X0ftI",
+                      "fill": "$foreground-muted",
+                      "content": "用心做好每一杯咖啡",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ybZSS",
+                  "name": "afLinks1",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "veUkY",
+                      "fill": "$surface-primary",
+                      "content": "菜单",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "P58w01",
+                      "fill": "$foreground-muted",
+                      "content": "热饮",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    },
+                    {
+                      "type": "text",
+                      "id": "Y16kdu",
+                      "fill": "$foreground-muted",
+                      "content": "冷饮",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    },
+                    {
+                      "type": "text",
+                      "id": "LNCR8",
+                      "fill": "$foreground-muted",
+                      "content": "甜点",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "wgKmO",
+                  "name": "afLinks2",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Ax0ZM",
+                      "fill": "$surface-primary",
+                      "content": "关于",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "K5CIIn",
+                      "fill": "$foreground-muted",
+                      "content": "品牌故事",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    },
+                    {
+                      "type": "text",
+                      "id": "r4yy6U",
+                      "fill": "$foreground-muted",
+                      "content": "门店查询",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    },
+                    {
+                      "type": "text",
+                      "id": "r0TKi",
+                      "fill": "$foreground-muted",
+                      "content": "加入我们",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "m3ZWSv",
+                  "name": "afLinks3",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "kVZCl",
+                      "fill": "$surface-primary",
+                      "content": "联系我们",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "w81LU8",
+                      "fill": "$foreground-muted",
+                      "content": "上海市静安区南京西路1688号",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    },
+                    {
+                      "type": "text",
+                      "id": "yK26R",
+                      "fill": "$foreground-muted",
+                      "content": "021-5888-6666",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    },
+                    {
+                      "type": "text",
+                      "id": "ulFd5",
+                      "fill": "$foreground-muted",
+                      "content": "hello@brewandco.cn",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "c2c6Tc",
+              "name": "afBottom",
+              "width": "fill_container",
+              "padding": [
+                20,
+                0,
+                0,
+                0
+              ],
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "a6p0B",
+                  "fill": "$foreground-muted",
+                  "content": "© 2024 Brew & Co. All rights reserved.",
+                  "fontFamily": "Inter",
+                  "fontSize": 13
+                },
+                {
+                  "type": "frame",
+                  "id": "o2mkq",
+                  "name": "afSocial",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "WcsDi",
+                      "fill": "$foreground-muted",
+                      "content": "微信",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "bl6yn",
+                      "fill": "$foreground-muted",
+                      "content": "微博",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "H8gXpA",
+                      "fill": "$foreground-muted",
+                      "content": "小红书",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "Xkot1",
+      "x": 4560,
+      "y": 0,
+      "name": "Contact Page",
+      "width": 1440,
+      "fill": "$surface-primary",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "SoRJu",
+          "name": "ctNav",
+          "width": "fill_container",
+          "padding": [
+            80,
+            20
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "Z2XUB",
+              "name": "ctLogo",
+              "gap": 10,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "FuyRQ",
+                  "content": "☕",
+                  "fontFamily": "Inter",
+                  "fontSize": 24,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "IIa63",
+                  "fill": "$foreground-primary",
+                  "content": "Brew & Co.",
+                  "fontFamily": "Playfair Display",
+                  "fontSize": 20,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "yCaiI",
+              "name": "ctNavLinks",
+              "gap": 40,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "UCvDM",
+                  "fill": "$foreground-secondary",
+                  "content": "首页",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "yOGpX",
+                  "fill": "$foreground-secondary",
+                  "content": "菜单",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "Y7NyI",
+                  "fill": "$foreground-secondary",
+                  "content": "关于我们",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "mSPlI",
+                  "fill": "$accent-primary",
+                  "content": "联系",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "id": "Icj73",
+              "type": "ref",
+              "ref": "y8XE0",
+              "name": "ctNavBtn",
+              "descendants": {
+                "FkFcH": {
+                  "content": "预约订座"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "ieAmk",
+          "width": "fill_container",
+          "height": 1,
+          "fill": "$border-subtle"
+        },
+        {
+          "type": "frame",
+          "id": "ROTkQ",
+          "name": "ctHero",
+          "width": "fill_container",
+          "fill": "$surface-secondary",
+          "layout": "vertical",
+          "gap": 12,
+          "padding": [
+            60,
+            80
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "NsFBI",
+              "fill": "$accent-primary",
+              "content": "联系我们",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "TLTwn",
+              "fill": "$foreground-primary",
+              "content": "期待与您相遇",
+              "fontFamily": "Playfair Display",
+              "fontSize": 44,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "D1Gl1",
+              "fill": "$foreground-muted",
+              "content": "无论您有任何问题或建议，我们都乐于倾听",
+              "fontFamily": "Inter",
+              "fontSize": 16
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "GbMRP",
+          "name": "infoRow",
+          "width": "fill_container",
+          "gap": 32,
+          "padding": [
+            60,
+            80
+          ],
+          "justifyContent": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "G1REn9",
+              "name": "ic1",
+              "width": "fill_container",
+              "fill": "$surface-primary",
+              "cornerRadius": "$rounded-xl",
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#00000008",
+                "offset": {
+                  "x": 0,
+                  "y": 4
+                },
+                "blur": 12
+              },
+              "layout": "vertical",
+              "gap": 12,
+              "padding": 32,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "KYkYb",
+                  "width": 56,
+                  "height": 56,
+                  "fill": "$surface-secondary",
+                  "cornerRadius": "$rounded-full",
+                  "justifyContent": "center",
+                  "alignItems": "center"
+                },
+                {
+                  "type": "text",
+                  "id": "SU2jQ",
+                  "content": "📍",
+                  "fontFamily": "Inter",
+                  "fontSize": 24,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "rtOph",
+                  "fill": "$foreground-primary",
+                  "content": "门店地址",
+                  "fontFamily": "Playfair Display",
+                  "fontSize": 18,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "P5RoQ",
+                  "fill": "$foreground-muted",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "上海市静安区\n南京西路1688号",
+                  "lineHeight": 1.6,
+                  "fontFamily": "Inter",
+                  "fontSize": 14
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "b4uNg0",
+              "name": "ic2",
+              "width": "fill_container",
+              "fill": "$surface-primary",
+              "cornerRadius": "$rounded-xl",
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#00000008",
+                "offset": {
+                  "x": 0,
+                  "y": 4
+                },
+                "blur": 12
+              },
+              "layout": "vertical",
+              "gap": 12,
+              "padding": 32,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "QOBwW",
+                  "width": 56,
+                  "height": 56,
+                  "fill": "$surface-secondary",
+                  "cornerRadius": "$rounded-full",
+                  "justifyContent": "center",
+                  "alignItems": "center"
+                },
+                {
+                  "type": "text",
+                  "id": "RZYDe",
+                  "content": "📞",
+                  "fontFamily": "Inter",
+                  "fontSize": 24,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "V6DAk",
+                  "fill": "$foreground-primary",
+                  "content": "联系电话",
+                  "fontFamily": "Playfair Display",
+                  "fontSize": 18,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "M9uMi9",
+                  "fill": "$foreground-muted",
+                  "content": "021-5888-6666",
+                  "fontFamily": "Inter",
+                  "fontSize": 14
+                },
+                {
+                  "type": "text",
+                  "id": "s5YYJ",
+                  "fill": "$foreground-muted",
+                  "content": "周一至周日 8:00-22:00",
+                  "fontFamily": "Inter",
+                  "fontSize": 12
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "kBR2m",
+              "name": "ic3",
+              "width": "fill_container",
+              "fill": "$surface-primary",
+              "cornerRadius": "$rounded-xl",
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#00000008",
+                "offset": {
+                  "x": 0,
+                  "y": 4
+                },
+                "blur": 12
+              },
+              "layout": "vertical",
+              "gap": 12,
+              "padding": 32,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "q0IJgZ",
+                  "width": 56,
+                  "height": 56,
+                  "fill": "$surface-secondary",
+                  "cornerRadius": "$rounded-full",
+                  "justifyContent": "center",
+                  "alignItems": "center"
+                },
+                {
+                  "type": "text",
+                  "id": "deJf0",
+                  "content": "✉️",
+                  "fontFamily": "Inter",
+                  "fontSize": 24,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "HYH0i",
+                  "fill": "$foreground-primary",
+                  "content": "电子邮件",
+                  "fontFamily": "Playfair Display",
+                  "fontSize": 18,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "HRKy6",
+                  "fill": "$foreground-muted",
+                  "content": "hello@brewandco.cn",
+                  "fontFamily": "Inter",
+                  "fontSize": 14
+                },
+                {
+                  "type": "text",
+                  "id": "EmgD8",
+                  "fill": "$foreground-muted",
+                  "content": "我们会在24小时内回复",
+                  "fontFamily": "Inter",
+                  "fontSize": 12
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "rVejG",
+          "name": "Stores",
+          "width": "fill_container",
+          "fill": "$surface-secondary",
+          "layout": "vertical",
+          "gap": 32,
+          "padding": [
+            40,
+            80
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "jHNuX",
+              "fill": "$accent-primary",
+              "content": "门店查询",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "E7oHWN",
+              "fill": "$foreground-primary",
+              "content": "五家门店，遍布上海核心商圈",
+              "fontFamily": "Playfair Display",
+              "fontSize": 36,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "fdugp",
+              "name": "storesGrid",
+              "width": "fill_container",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "CF6P2",
+                  "name": "s1",
+                  "width": "fill_container",
+                  "fill": "$surface-primary",
+                  "cornerRadius": "$rounded-lg",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 24,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Wzsci",
+                      "fill": "$foreground-primary",
+                      "content": "静安寺店",
+                      "fontFamily": "Playfair Display",
+                      "fontSize": 18,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "E9kIN",
+                      "fill": "$foreground-muted",
+                      "content": "📍 南京西路1688号",
+                      "fontFamily": "Inter",
+                      "fontSize": 13
+                    },
+                    {
+                      "type": "text",
+                      "id": "E9q5Zk",
+                      "fill": "$foreground-muted",
+                      "content": "🕐 7:00 - 22:00",
+                      "fontFamily": "Inter",
+                      "fontSize": 13
+                    },
+                    {
+                      "type": "frame",
+                      "id": "nqhsN",
+                      "fill": "$accent-primary",
+                      "cornerRadius": "$rounded-full",
+                      "padding": [
+                        10,
+                        16
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "b4Ewmv",
+                          "fill": "$surface-primary",
+                          "content": "导航",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "QFDpV",
+                  "name": "s2",
+                  "width": "fill_container",
+                  "fill": "$surface-primary",
+                  "cornerRadius": "$rounded-lg",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 24,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "IXePR",
+                      "fill": "$foreground-primary",
+                      "content": "陆家嘴店",
+                      "fontFamily": "Playfair Display",
+                      "fontSize": 18,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "C6FXJv",
+                      "fill": "$foreground-muted",
+                      "content": "📍 世纪大道100号",
+                      "fontFamily": "Inter",
+                      "fontSize": 13
+                    },
+                    {
+                      "type": "text",
+                      "id": "x10Jb5",
+                      "fill": "$foreground-muted",
+                      "content": "🕐 7:30 - 21:30",
+                      "fontFamily": "Inter",
+                      "fontSize": 13
+                    },
+                    {
+                      "type": "frame",
+                      "id": "cpXyI",
+                      "fill": "$accent-primary",
+                      "cornerRadius": "$rounded-full",
+                      "padding": [
+                        10,
+                        16
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "BSFSI",
+                          "fill": "$surface-primary",
+                          "content": "导航",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "R14WL",
+                  "name": "s3",
+                  "width": "fill_container",
+                  "fill": "$surface-primary",
+                  "cornerRadius": "$rounded-lg",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 24,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "cVT8P",
+                      "fill": "$foreground-primary",
+                      "content": "新天地店",
+                      "fontFamily": "Playfair Display",
+                      "fontSize": 18,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "j5EL4h",
+                      "fill": "$foreground-muted",
+                      "content": "📍 太仓路181号",
+                      "fontFamily": "Inter",
+                      "fontSize": 13
+                    },
+                    {
+                      "type": "text",
+                      "id": "Q98PME",
+                      "fill": "$foreground-muted",
+                      "content": "🕐 8:00 - 23:00",
+                      "fontFamily": "Inter",
+                      "fontSize": 13
+                    },
+                    {
+                      "type": "frame",
+                      "id": "pR80k",
+                      "fill": "$accent-primary",
+                      "cornerRadius": "$rounded-full",
+                      "padding": [
+                        10,
+                        16
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Qmiua",
+                          "fill": "$surface-primary",
+                          "content": "导航",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "U27MQy",
+                  "name": "s4",
+                  "width": "fill_container",
+                  "fill": "$surface-primary",
+                  "cornerRadius": "$rounded-lg",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 24,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "X8Ggmx",
+                      "fill": "$foreground-primary",
+                      "content": "徐家汇店",
+                      "fontFamily": "Playfair Display",
+                      "fontSize": 18,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "LAdrK",
+                      "fill": "$foreground-muted",
+                      "content": "📍 虹桥路1号",
+                      "fontFamily": "Inter",
+                      "fontSize": 13
+                    },
+                    {
+                      "type": "text",
+                      "id": "LSFuI",
+                      "fill": "$foreground-muted",
+                      "content": "🕐 7:30 - 22:00",
+                      "fontFamily": "Inter",
+                      "fontSize": 13
+                    },
+                    {
+                      "type": "frame",
+                      "id": "ov0Kc",
+                      "fill": "$accent-primary",
+                      "cornerRadius": "$rounded-full",
+                      "padding": [
+                        10,
+                        16
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "zuqWN",
+                          "fill": "$surface-primary",
+                          "content": "导航",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "B32Qd3",
+          "name": "Contact Form",
+          "width": "fill_container",
+          "gap": 80,
+          "padding": [
+            60,
+            80
+          ],
+          "justifyContent": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "CMggN",
+              "name": "formInfo",
+              "width": 400,
+              "layout": "vertical",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "x7Kehm",
+                  "fill": "$foreground-primary",
+                  "content": "在线咨询",
+                  "fontFamily": "Playfair Display",
+                  "fontSize": 36,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "LdrDC",
+                  "fill": "$foreground-muted",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "有任何问题或合作意向？请填写表单，我们的团队将尽快与您联系。",
+                  "lineHeight": 1.6,
+                  "fontFamily": "Inter",
+                  "fontSize": 15
+                },
+                {
+                  "type": "frame",
+                  "id": "toW9f",
+                  "name": "formSocial",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": [
+                    16,
+                    0,
+                    0,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "N1Deg",
+                      "fill": "$foreground-primary",
+                      "content": "关注我们",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "S3uFwZ",
+                      "name": "formSocialRow",
+                      "gap": 16,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "dxXnn",
+                          "width": 40,
+                          "height": 40,
+                          "fill": "$surface-secondary",
+                          "cornerRadius": "$rounded-full",
+                          "justifyContent": "center",
+                          "alignItems": "center"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "I9MvHW",
+                          "width": 40,
+                          "height": 40,
+                          "fill": "$surface-secondary",
+                          "cornerRadius": "$rounded-full",
+                          "justifyContent": "center",
+                          "alignItems": "center"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "XKml1",
+                          "width": 40,
+                          "height": 40,
+                          "fill": "$surface-secondary",
+                          "cornerRadius": "$rounded-full",
+                          "justifyContent": "center",
+                          "alignItems": "center"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Hwv6P",
+              "name": "formFields",
+              "width": 520,
+              "layout": "vertical",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "giatW",
+                  "name": "ff1",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "tXoLS",
+                      "fill": "$foreground-primary",
+                      "content": "姓名",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "eGUKp",
+                      "width": "fill_container",
+                      "height": 48,
+                      "fill": "$surface-secondary",
+                      "cornerRadius": "$rounded-md",
+                      "layout": "vertical",
+                      "padding": [
+                        0,
+                        16
+                      ],
+                      "justifyContent": "center"
+                    },
+                    {
+                      "type": "text",
+                      "id": "uOuRt",
+                      "fill": "$foreground-muted",
+                      "content": "请输入您的姓名",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "l3Lqy4",
+                  "name": "ff2",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "DbUP9",
+                      "fill": "$foreground-primary",
+                      "content": "邮箱",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "xVbts",
+                      "width": "fill_container",
+                      "height": 48,
+                      "fill": "$surface-secondary",
+                      "cornerRadius": "$rounded-md",
+                      "layout": "vertical",
+                      "padding": [
+                        0,
+                        16
+                      ],
+                      "justifyContent": "center"
+                    },
+                    {
+                      "type": "text",
+                      "id": "FYIRJ",
+                      "fill": "$foreground-muted",
+                      "content": "请输入您的邮箱",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Gwpi0",
+                  "name": "ff3",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "yGO1z",
+                      "fill": "$foreground-primary",
+                      "content": "咨询内容",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "yCoYL",
+                      "width": "fill_container",
+                      "height": 120,
+                      "fill": "$surface-secondary",
+                      "cornerRadius": "$rounded-md",
+                      "padding": 16
+                    },
+                    {
+                      "type": "text",
+                      "id": "busCh",
+                      "fill": "$foreground-muted",
+                      "content": "请输入您想咨询的内容",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    }
+                  ]
+                },
+                {
+                  "id": "ppK1l",
+                  "type": "ref",
+                  "ref": "y8XE0",
+                  "name": "submitBtn",
+                  "descendants": {
+                    "FkFcH": {
+                      "content": "发送咨询"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "o6jkKl",
+          "name": "ctFooter",
+          "width": "fill_container",
+          "fill": "$foreground-primary",
+          "layout": "vertical",
+          "gap": 48,
+          "padding": [
+            60,
+            80,
+            40,
+            80
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "N2BYY",
+              "name": "ctfTop",
+              "width": "fill_container",
+              "gap": 80,
+              "justifyContent": "space_between",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "H2VZM",
+                  "name": "ctfBrand",
+                  "width": 300,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "OFzqR",
+                      "name": "ctfLogo",
+                      "gap": 10,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "m1OZyd",
+                          "content": "☕",
+                          "fontFamily": "Inter",
+                          "fontSize": 24,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "pu9i0",
+                          "fill": "$surface-primary",
+                          "content": "Brew & Co.",
+                          "fontFamily": "Playfair Display",
+                          "fontSize": 20,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "f5ellv",
+                      "fill": "$foreground-muted",
+                      "content": "城市中心的精品咖啡体验",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "S27pLr",
+                  "name": "ctfL1",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "zDOFH",
+                      "fill": "$surface-primary",
+                      "content": "菜单",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "JB3hw",
+                      "fill": "$foreground-muted",
+                      "content": "热饮",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    },
+                    {
+                      "type": "text",
+                      "id": "UuMmR",
+                      "fill": "$foreground-muted",
+                      "content": "冷饮",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    },
+                    {
+                      "type": "text",
+                      "id": "wZA8x",
+                      "fill": "$foreground-muted",
+                      "content": "甜点",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "js0jS",
+                  "name": "ctfL2",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "B3qH6u",
+                      "fill": "$surface-primary",
+                      "content": "关于",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "my0q3",
+                      "fill": "$foreground-muted",
+                      "content": "品牌故事",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    },
+                    {
+                      "type": "text",
+                      "id": "Q5GnG",
+                      "fill": "$foreground-muted",
+                      "content": "门店查询",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    },
+                    {
+                      "type": "text",
+                      "id": "Oo5p1",
+                      "fill": "$foreground-muted",
+                      "content": "加入我们",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "jytr0",
+                  "name": "ctfL3",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Cu9UU",
+                      "fill": "$surface-primary",
+                      "content": "联系我们",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "A8Qbf",
+                      "fill": "$foreground-muted",
+                      "content": "021-5888-6666",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    },
+                    {
+                      "type": "text",
+                      "id": "qd5lo",
+                      "fill": "$foreground-muted",
+                      "content": "hello@brewandco.cn",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "KFzB5",
+              "name": "ctfBottom",
+              "width": "fill_container",
+              "padding": [
+                20,
+                0,
+                0,
+                0
+              ],
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "nMgf5",
+                  "fill": "$foreground-muted",
+                  "content": "© 2024 Brew & Co. All rights reserved.",
+                  "fontFamily": "Inter",
+                  "fontSize": 13
+                },
+                {
+                  "type": "frame",
+                  "id": "xxYS4",
+                  "name": "ctfSocial",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Xg9PY",
+                      "fill": "$foreground-muted",
+                      "content": "微信",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Tyhv1",
+                      "fill": "$foreground-muted",
+                      "content": "微博",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "TbhuQ",
+                      "fill": "$foreground-muted",
+                      "content": "小红书",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ]
     }
-  ]
+  ],
+  "variables": {
+    "accent-primary": {
+      "type": "color",
+      "value": "#7D6B3DFF"
+    },
+    "accent-secondary": {
+      "type": "color",
+      "value": "#4A3F24FF"
+    },
+    "border-subtle": {
+      "type": "color",
+      "value": "#DCD8CBFF"
+    },
+    "foreground-muted": {
+      "type": "color",
+      "value": "#8C8782FF"
+    },
+    "foreground-primary": {
+      "type": "color",
+      "value": "#2D2926FF"
+    },
+    "foreground-secondary": {
+      "type": "color",
+      "value": "#5E5954FF"
+    },
+    "rounded-full": {
+      "type": "number",
+      "value": 9999
+    },
+    "rounded-lg": {
+      "type": "number",
+      "value": 8
+    },
+    "rounded-md": {
+      "type": "number",
+      "value": 6
+    },
+    "rounded-xl": {
+      "type": "number",
+      "value": 12
+    },
+    "surface-primary": {
+      "type": "color",
+      "value": "#F5F2E9FF"
+    },
+    "surface-secondary": {
+      "type": "color",
+      "value": "#E8E4D8FF"
+    }
+  }
 }

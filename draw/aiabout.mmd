@@ -1,0 +1,54 @@
+%%{init: {'theme': 'default', 'themeVariables': {
+  'background': '#faf8f5',
+  'primaryTextColor': '#2d3748',
+  'lineColor': '#81b29a',
+  'fontSize': '14px',
+  'fontFamily': 'Microsoft YaHei, PingFang SC, sans-serif'
+}}}%%
+
+flowchart TD
+    subgraph A [🎨 应用与交互层 / Application & Interaction Layer]
+        direction LR
+        A1[🧠 Agent 智能体<br>Agent]
+        A2[👥 Multi-Agent 多智能体系统<br>Multi-Agent System]
+    end
+
+    subgraph B [⚡ 核心能力层 / Core Capability Layer]
+        direction TB
+        B1[🗺️ 规划与编排<br>Planning & Orchestration]
+        B2[💭 记忆模块<br>Memory Module]
+        B3[🛠️ 工具与技能<br>Tools & Skills]
+    end
+
+    subgraph C [🌉 协议与框架层 / Protocol & Framework Layer]
+        direction LR
+        C1[📡 MCP 协议<br>Model Context Protocol]
+        C2[🧱 开发框架<br>Development Framework]
+    end
+
+    subgraph D [🗄️ 工程与数据层 / Engineering & Data Layer]
+        direction TB
+        D1[🔍 RAG 检索增强生成<br>Retrieval-Augmented Generation]
+        D2[💎 向量数据库<br>Vector Database]
+        D3[📈 可观测性平台<br>Observability Platform]
+    end
+
+    A --> B
+    B --> C
+    C --> D
+
+    %% 手绘风格节点
+    classDef nodeA fill:#d8eae2,stroke:#81b29a,stroke-width:2px
+    classDef nodeB fill:#fef5e7,stroke:#f2cc8f,stroke-width:2px
+    classDef nodeC fill:#fde8e3,stroke:#e07a5f,stroke-width:2px
+    classDef nodeD fill:#e8eaf6,stroke:#a2b5cd,stroke-width:2px
+
+    class A1,A2 nodeA
+    class B1,B2,B3 nodeB
+    class C1,C2 nodeC
+    class D1,D2,D3 nodeD
+
+    style A fill:#d8eae2,stroke:#81b29a,stroke-width:2px
+    style B fill:#fef5e7,stroke:#f2cc8f,stroke-width:2px
+    style C fill:#fde8e3,stroke:#e07a5f,stroke-width:2px
+    style D fill:#e8eaf6,stroke:#a2b5cd,stroke-width:2px

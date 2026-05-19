@@ -1,2 +1,7 @@
 node_modules/
 node-api/data/eason.avi
+
+# Rust 构建产物
+**/target/
+**/*.rs.bk
+**/*.pdb

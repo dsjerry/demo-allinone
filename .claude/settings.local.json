@@ -5,7 +5,9 @@
       "Bash(npm install *)",
       "Bash(mmdc -i mermaid.mmd -o mermaid.png -b white)",
       "Bash(mmdc --help)",
-      "Bash(mmdc -i mermaid.mmd -o mermaid.png -b transparent)"
+      "Bash(mmdc -i mermaid.mmd -o mermaid.png -b transparent)",
+      "Bash(cargo init *)",
+      "Bash(npx -y mmdc -i \"d:\\\\Dev\\\\demo\\\\demo-allinone\\\\draw\\\\aiabout.mmd\" -o \"d:\\\\Dev\\\\demo\\\\demo-allinone\\\\draw\\\\aiabout.png\" -s 3)"
     ]
   }
 }
