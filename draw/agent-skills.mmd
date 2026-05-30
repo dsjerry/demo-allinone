@@ -1,0 +1,43 @@
+graph TD
+    subgraph 核心结构["🎯 核心结构 - Skill 文件夹"]
+        A[Agent Skill] --> B[SKILL.md<br/>必需：元数据 + 指令]
+        A --> C[scripts/<br/>可选：可执行代码]
+        A --> D[references/<br/>可选：文档资料]
+        A --> E[assets/<br/>可选：模板、资源]
+    end
+
+    subgraph 工作原理["⚙️ 工作原理 - 三阶段渐进式披露"]
+        subgraph Stage1["1️⃣ Discovery 发现"]
+            A1[Agent 启动] --> A2[加载 name + description]
+            A2 --> A3[仅知道何时相关]
+        end
+        subgraph Stage2["2️⃣ Activation 激活"]
+            B1[任务匹配描述] --> B2[读取完整 SKILL.md]
+        end
+        subgraph Stage3["3️⃣ Execution 执行"]
+            C1[按指令执行] --> C2[执行捆绑代码]
+            C2 --> C3[加载引用文件]
+        end
+        A3 --> B1
+        B2 --> C1
+    end
+
+    subgraph 解决问题["💡 解决的问题"]
+        E1[领域专业知识]
+        E2[可重复的工作流]
+        E3[跨产品复用]
+    end
+
+    subgraph 能力增强["🚀 Agent 能力增强"]
+        F1[基础 Agent] -->|+ Skills| F2[具备专业能力的 Agent]
+        F2 --> F3[Domain Expertise<br/>领域专业知识]
+        F2 --> F4[Repeatable Workflows<br/>可重复工作流]
+        F2 --> F5[Context & Memory<br/>上下文与记忆]
+    end
+
+    subgraph 快速开始["🏃 快速开始"]
+        G1[创建 my-skill/] --> G2[添加 SKILL.md]
+        G2 --> G3[定义 metadata<br/>name + description]
+        G3 --> G4[编写 instructions<br/>告诉 agent 如何执行]
+        G4 --> G5[可选：添加<br/>scripts/ references/ assets/]
+    end

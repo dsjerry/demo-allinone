@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <input type="text" />
+      <span>+</span>
+      <input type="text" />
+      <span>=</span>
+      <input type="text" />
+      <button>计算</button>
+    </div>
+    <script>
+      const btn = document.querySelector("button");
+      btn.addEventListener("click", () => {
+        const input1 = document.querySelector("input[type='text']");
+        const input2 = document.querySelectorAll("input[type='text']")[1];
+        const input3 = document.querySelectorAll("input[type='text']")[2];
+        input3.value = Number(input1.value) + Number(input2.value);
+      });
+    </script>
+  </body>
+</html>
